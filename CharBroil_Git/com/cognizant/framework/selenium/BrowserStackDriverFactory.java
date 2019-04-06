@@ -38,10 +38,13 @@ public class BrowserStackDriverFactory {
 			SeleniumTestParameters testParameters) {
 		WebDriver driver = null;
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability("platform", platformName);
+		desiredCapabilities.setCapability("os", platformName);
+		if(platformName.toLowerCase().equals("windows"){
+			desiredCapabilities.setCapability("os_version", "10");
+		}
 		desiredCapabilities.setCapability("browser_version", browserVersion);
 		desiredCapabilities.setCapability("browser", browser);
-		// desiredCapabilities.setCapability("screen-resolution","800x600");
+		desiredCapabilities.setCapability("screen-resolution","1366x768");
 		try {
 			driver = new RemoteWebDriver(new URL(browserStackURL), desiredCapabilities);
 		} catch (MalformedURLException e) {
