@@ -1434,8 +1434,8 @@ public class ProductListingPageComponents extends ReusableLibrary {
 										driver.findElement(ProductDetailsPage.selectQuantity).isDisplayed() &&
 										//driver.findElement(ProductDetailsPage.btnWhereToBuy).isDisplayed() &&
 										driver.findElement(ProductDetailsPage.imgProductDetails).isDisplayed() &&
-										driver.findElement(ProductDetailsPage.lblProductDescription).isDisplayed() &&
-										driver.findElement(ProductDetailsPage.selectColorPDP).isDisplayed()
+										driver.findElement(ProductDetailsPage.lblProductDescription).isDisplayed() 
+										//&& driver.findElement(ProductDetailsPage.selectColorPDP).isDisplayed()
 										)
 								{
 									report.updateTestLog("Product Details Page", "Product Details Page validation is successful", Status.PASS);

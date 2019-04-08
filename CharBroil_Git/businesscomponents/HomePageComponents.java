@@ -485,10 +485,10 @@ public class HomePageComponents extends ReusableLibrary {
 					driver.findElement(HomePage.linkReplacementParts).isDisplayed() &&
 					driver.findElement(HomePage.linkAboutUs).isDisplayed() &&
 					driver.findElement(HomePage.linkCareers).isDisplayed() &&
-					driver.findElement(HomePage.linkCbGear).isDisplayed() &&
 					driver.findElement(HomePage.linkSaberGrills).isDisplayed() &&
 					driver.findElement(HomePage.linkDancookGrills).isDisplayed() &&
 					driver.findElement(HomePage.linkOklahomaJoeSmokers).isDisplayed() &&
+					driver.findElement(HomePage.linkIdeaSubmission).isDisplayed() &&
 					driver.findElement(HomePage.linkPrivacyPolicy).isDisplayed() &&
 					driver.findElement(HomePage.linkTermsOfUseAtHome).isDisplayed() &&
 					driver.findElement(HomePage.linkCaTransparencySupplyChains).isDisplayed()

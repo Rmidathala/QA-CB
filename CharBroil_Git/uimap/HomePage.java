@@ -65,7 +65,7 @@ public class HomePage {
 	public static final By linkWhatsHotRedPlus4 = By.xpath("//html[@id='top']/body/div/div/div[3]/div/div/div[3]/div[2]/div[2]/div[2]/div[4]");
 	public static final By linkWhatsHotRedPlus5 = By.xpath("//html[@id='top']/body/div/div/div[3]/div/div/div[3]/div[2]/div[2]/div[2]/div[5]");
 
-	//public static final By linkExploreBigEasyFryer = By.xpath("//a[text()='Explore the big easy® fryer']");
+	//public static final By linkExploreBigEasyFryer = By.xpath("//a[text()='Explore the big easyÂ® fryer']");
 	public static final By linkCheckOutModularKitchen = By.xpath("//a[text()='Check it out']"); 
 
 	//Arka
@@ -81,6 +81,7 @@ public class HomePage {
 
 	//Links at footer
 	public static final By linkContactNo = By.cssSelector("li.contact__phone > a");
+	public static final By linkSendEmail = By.linkText("Send an Email");
 	//	public static final By linkProductHelp = By.linkText("Product Help");
 	public static final By linkProductHelp = By.xpath("//div[@class='footer__list']/ul/li/a[text()='Product Help']");	
 	public static final By linkProductHelpTitle = By.cssSelector("h2.callout__title");
@@ -91,12 +92,15 @@ public class HomePage {
 	public static final By linkAboutUs = By.linkText("About Us");
 	public static final By linkAboutUsContentFirst = By.cssSelector("h2");
 	public static final By linkCareers = By.linkText("Careers");
-	public static final By linkCbGear = By.linkText("Char-Broil® Gear");
-	public static final By linkSaberGrills = By.linkText("SABER® Grills");
-	public static final By linkDancookGrills = By.linkText("Dancook® Grills");
-	public static final By linkOklahomaJoeSmokers = By.xpath("//section[@id='footer-company']/div/ul/li[6]/a");
+	public static final By linkCbGear = By.linkText("Char-Broilï¿½ Gear");
+	public static final By linkSaberGrills = By.xpath("//*[@id='footer-company']/div/ul/li[3]/a");
+	public static final By linkDancookGrills = By.xpath("//*[@id='footer-company']/div/ul/li[4]/a");
+	public static final By linkOklahomaJoeSmokers = By.xpath("//section[@id='footer-company']/div/ul/li[5]/a");
+	public static final By linkIdeaSubmission = By.xpath("//section[@id='footer-company']/div/ul/li[6]/a");
 	public static final By linkPrivacyPolicy = By.linkText("Privacy Policy");
 	public static final By linkTermsOfUse = By.xpath("(//a[contains(text(),'Terms of Use')])[2]");
+	
+	public static final By linkAccessibility = By.linkText("Accessibility");
 
 
 	public static final By linkTermsOfUseAtHome = By.linkText("Terms of Use"); 
