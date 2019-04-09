@@ -252,19 +252,19 @@ public class HomePageComponents extends ReusableLibrary {
 			Browser browser = driver.getTestParameters().getBrowser();
 
 			driver.findElement(HomePage.txtSearchItemHomePage).sendKeys(item);
-			if(browser.equals(Browser.INTERNET_EXPLORER))	{
+			if(browser.equals(Browser.INTERNET_EXPLORER) || browser.equals(Browser.IE))	{
 				Robot robot = new Robot();
 				robot.keyPress(KeyEvent.VK_ENTER);
 
 			}	else	{
 				driver.findElement(HomePage.txtSearchItemHomePage).sendKeys(Keys.ENTER);
 			}			
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 
 			if(driver.findElement(ProductListingPage.lblSortByPLP).isDisplayed())	{
-				report.updateTestLog("Product Listing Page", "Product Listing Page is Displayed after search", Status.PASS);
+				report.updateTestLog("Product Listing Page", "Product Listing Page is Displayed after search for: "+item, Status.PASS);
 			}	else	{
-				report.updateTestLog("Product Listing Page", "Product Listing Page is not Displayed after search", Status.FAIL);
+				report.updateTestLog("Product Listing Page", "Product Listing Page is not Displayed after search for: "+item, Status.FAIL);
 			}
 		}
 		catch (Exception e) {
@@ -352,7 +352,16 @@ public class HomePageComponents extends ReusableLibrary {
 			}
 			else if(modelType.equalsIgnoreCase("invalid"))	{
 				if(wdu.objectExists(PartFinderPage.linkResultProductsNotFound))	{
-					if(driver.findElement(PartFinderPage.linkResultProductsNotFound).getText().contains("There are no parts available for this model."))
+					if (driver.findElement(PartFinderPage.linkResultProductsNotFound).getText()
+							.contains("Oh no! Our bots couldn’t find it.")
+							&& driver.findElement(PartFinderPage.linkResultProductsNotFound).getText()
+									.contains("Surely our humans can.")
+							&& driver.findElement(PartFinderPage.linkResultProductsNotFound).getText()
+									.contains("Call us at 1-866-239-6777")
+							&& driver.findElement(PartFinderPage.linkResultProductsNotFound).getText()
+									.contains("Monday-Friday 9a-7p (EST)")
+							&& driver.findElement(PartFinderPage.linkResultProductsNotFound).getText()
+									.contains("Saturday 9a-3p (EST)"))
 						report.updateTestLog("Find A Part Result for invalid product", "Message displayed against invalid product search.", Status.PASS);
 					else
 						report.updateTestLog("Find A Part Result for invalid product", "Message not displayed against search.", Status.FAIL);

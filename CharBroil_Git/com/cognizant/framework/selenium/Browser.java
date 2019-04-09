@@ -10,6 +10,7 @@ public enum Browser {
 	GHOST_DRIVER("phantomjs"),
 	HTML_UNIT("htmlunit"),
 	INTERNET_EXPLORER("internet explorer"),
+	IE("IE"),
 	OPERA("opera"),
 	SAFARI("safari"),
 	/**

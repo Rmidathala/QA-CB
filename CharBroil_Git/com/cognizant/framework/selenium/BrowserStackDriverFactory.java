@@ -41,7 +41,7 @@ public class BrowserStackDriverFactory {
 		desiredCapabilities.setCapability("platform", platformName);
 		desiredCapabilities.setCapability("browser_version", browserVersion);
 		desiredCapabilities.setCapability("browser", browser);
-		//desiredCapabilities.setCapability("screen-resolution","1366x768");
+		desiredCapabilities.setCapability("screen-resolution","1366x768");
 		try {
 			driver = new RemoteWebDriver(new URL(browserStackURL), desiredCapabilities);
 		} catch (MalformedURLException e) {

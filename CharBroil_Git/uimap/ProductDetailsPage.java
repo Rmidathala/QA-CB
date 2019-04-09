@@ -9,6 +9,7 @@ public class ProductDetailsPage {
 	public static final By lblOutofStock = By.xpath("//div[@class='Product-summary__info_box']/span");
 	public static final By btnAddtoCartPDP = By.xpath("//button[@title='Add to Cart']");
 	public static final By selectColorPDP = By.xpath("//div[@id='option']");
+	public static final By btnWhereToBy = By.xpath("//div[@aria-label='Where to Buy']");
 	public static final By btnViewCartCheckoutPDP = By.xpath("//*[@id='interstitial-container']/div/div[3]/div[2]/button[2]/span/span");
 		
 	public static final By selectFirstConfigureOptionPDP = By.xpath("//div[@class='configurable-swatch-list list clearfix']/a[1]/div");

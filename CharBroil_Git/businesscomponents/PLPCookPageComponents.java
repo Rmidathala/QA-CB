@@ -179,16 +179,16 @@ public class PLPCookPageComponents extends ReusableLibrary {
 				expectedUrl = "/collections/digital-electric-smoker-recipes-collection/";
 				break;
 
-			case "Holiday Recipes":
-				expectedUrl = "/collections/holiday-recipes/";
+			case "Keep it Lean":
+				expectedUrl = "/collections/keep-it-lean/";
 				break;
 
-			case "The Big Easy®":
-				expectedUrl = "/collections/the-big-easy-oilless-fryer-recipes/";
+			case "Burger Hall of Fame":
+				expectedUrl = "collections/burger-hall-of-fame/";
 				break;
 
-			case "Thanksgiving":
-				expectedUrl = "/collections/thanksgiving-collection/";
+			case "Top-Notch Tacos":
+				expectedUrl = "collections/top-notch-tacos/";
 				break;
 
 			default:
