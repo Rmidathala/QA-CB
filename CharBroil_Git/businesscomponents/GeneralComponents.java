@@ -39,8 +39,9 @@ public class GeneralComponents extends ReusableLibrary {
 					properties.getProperty("ApplicationUrl"), Status.DONE);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-			driver.get(properties.getProperty("ApplicationUrl"));		
-			//	driver.navigate().refresh();
+			driver.get(properties.getProperty("ApplicationUrl"));
+			driver.manage().window().maximize();		
+			
 			wdu.waitUntilPageReadyStateComplete(120);		
 			System.out.println("Test Script Execution Started.........");
 		}	catch (Exception e) {
