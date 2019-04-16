@@ -49,6 +49,22 @@ public class GeneralComponents extends ReusableLibrary {
 		}
 	}
 
+	public void invokeStagingApplication() {
+		try	{
+			report.updateTestLog("Invoke Application", "Invoke the application under test @ " +
+					properties.getProperty("StagingApplicationUrl"), Status.DONE);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+			driver.get(properties.getProperty("StagingApplicationUrl"));
+			driver.manage().window().maximize();		
+			
+			wdu.waitUntilPageReadyStateComplete(120);		
+			System.out.println("Test Script Execution Started.........");
+		}	catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+	}
 	public void acceptCookies()	{
 		try {
 			for(int i=0 ; i<15 ; i++)	{
