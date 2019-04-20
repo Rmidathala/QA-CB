@@ -22,6 +22,7 @@ public class CheckOutPage {
 	public static final By btnContinue = By.xpath("//*[@id='billing-buttons-container']/button");
 	public static final By lblShippingMethod = By.xpath("//*[@id='opc-shipping_method']/h2");
 	public static final By btnContinueShippingMethod = By.xpath("//*[@id='shipping-method-buttons-container']/button");
+	public static final By lblShippingMethodShippingPge = By.xpath("//h2[text()='Shipping Method']");
 	
 	public static final By lblPaymentInformation = By.xpath("//*[@id='opc-payment']/h2");
 	

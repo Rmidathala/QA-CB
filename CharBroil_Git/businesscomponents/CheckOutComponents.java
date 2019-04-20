@@ -125,7 +125,7 @@ public class CheckOutComponents extends ReusableLibrary{
 		try {
 
 			String shippingMethod = dataTable.getData("General_Data", "ShippingMethod");
-
+			gc.scrollToElement(CheckOutPage.lblShippingMethodShippingPge);
 			wdu.waitUntilElementEnabled(CheckOutPage.btnContinueShippingMethod, 15);
 
 			if(wdu.objectExists(By.xpath(CheckOutPage.radioShippingMethod+"'"+shippingMethod+"')]/preceding-sibling::input")))

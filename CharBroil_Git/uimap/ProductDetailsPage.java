@@ -42,13 +42,13 @@ public class ProductDetailsPage {
 	
 	
 	
-	public static final By btnPartsForThisGrillSubmenu = By.xpath("//div[@id='product-drawers']/div[4]/div[1]/div");
+	public static final By btnPartsForThisGrillSubmenu = By.xpath("//div[@class='drawer__title' and @id='parts']");
 	public static final By btnSeeAllPartsofTheGrill = By.xpath("//a[contains(text(),'See All Parts For This Grill')]");
 	public static final By lblPartsForThisGrill = By.xpath("//div[@class='page-title']/h1");
 	public static final By lnkYoutubeThumbnail = By.xpath("//ul[@class='product-media__thumbnail-container']/li/img[contains(@alt,'YouTubeId')]");
 	public static final By imgYoutube = By.xpath("//a[@class='popup-youtube']");
 	public static final By frameYoutube = By.xpath("//iframe[contains(@src,'youtube')]");
-	public static final By btnGuideManualsSubmenu = By.xpath("//div[@id='product-drawers']/div[5]/div[1]/div");
+	public static final By btnGuideManualsSubmenu = By.xpath("//div[@class='drawer__title' and @id='guides']");
 	public static final By lnkManualPDF = By.xpath("//a[contains(@href,'pdf')]");
 	
 	

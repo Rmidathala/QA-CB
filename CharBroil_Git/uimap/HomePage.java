@@ -59,6 +59,7 @@ public class HomePage {
 	public static final By linkNowCookinElement5 = By.xpath("//html[@id='top']/body/div/div/div[3]/div/div/div[2]/div/div[2]/div[2]/div[3]/span[5]");
 
 	//Links for Whats Hot section
+	public static final By imgWhatsHotRed = By.xpath("//*[@id=\"top\"]/body/div[1]/div/div[3]/div/div/div[3]/div[2]/div[2]/div[2]");
 	public static final By linkWhatsHotRedPlus1 = By.xpath("//html[@id='top']/body/div/div/div[3]/div/div/div[3]/div[2]/div[2]/div[2]/div[1]");
 	public static final By linkWhatsHotRedPlus2 = By.xpath("//html[@id='top']/body/div/div/div[3]/div/div/div[3]/div[2]/div[2]/div[2]/div[2]");
 	public static final By linkWhatsHotRedPlus3 = By.xpath("//html[@id='top']/body/div/div/div[3]/div/div/div[3]/div[2]/div[2]/div[2]/div[3]");

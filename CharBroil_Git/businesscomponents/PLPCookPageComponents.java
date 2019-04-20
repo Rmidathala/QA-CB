@@ -176,11 +176,11 @@ public class PLPCookPageComponents extends ReusableLibrary {
 
 			switch (shopSubCatg) {
 			case "Digital Electric Smoker":
-				expectedUrl = "/collections/easter-feast/";
+				expectedUrl = "/collections/digital-electric-smoker-recipes-collection/";
 				break;
 
 			case "Easter Feast":
-				expectedUrl = "/collections/digital-electric-smoker-recipes-collection/";
+				expectedUrl = "/collections/easter-feast/";
 				break;
 
 			case "Keep it Lean":
