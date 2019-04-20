@@ -43,7 +43,6 @@ public class BrowserStackDriverFactory {
 		desiredCapabilities.setCapability("browser_version", browserVersion);
 		desiredCapabilities.setCapability("browser", browser);
 		desiredCapabilities.setCapability("screen-resolution","1366x768");
-		desiredCapabilities.setCapability("browserstack.local", true);
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
