@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class CheckOutPage {
 
-	public static final By btnProceedToCheckout = By.xpath("(//button[@title='Proceed to Checkout'])[1]");
+	public static final By btnProceedToCheckout = By.xpath("//div[@class='cart__intro-cta']/button[2]");
 	public static final By txtFirstname = By.xpath("//*[@id='billing:firstname']");
 	public static final By txtLastname = By.xpath("//*[@id='billing:lastname']");
 	public static final By txtCompany = By.xpath("//*[@id='billing:company']");

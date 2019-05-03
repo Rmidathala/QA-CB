@@ -35,6 +35,8 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 	public void addSimpleRandomProduct() {
 
 		try {
+			
+			gc.scrollToElement(ProductDetailsPage.btnAddtoCartPDP);
 
 			driver.findElement(ProductDetailsPage.btnAddtoCartPDP).click();
 
@@ -80,8 +82,8 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 
 				gc.scrollToElement(CheckOutPage.btnProceedToCheckout);
 				driver.findElement(CheckOutPage.btnProceedToCheckout).click();
-				wdu.waitUntilElementEnabled(CheckOutPage.txtFirstname, 30);
-
+				//wdu.waitUntilElementEnabled(CheckOutPage.txtFirstname, 30);
+				gc.scrollToElement(CheckOutPage.txtFirstname);
 				if (driver.findElement(CheckOutPage.txtFirstname).isDisplayed()) {
 					report.updateTestLog("Proceed to Check out", "Proceed to checkout done", Status.PASS);
 				}
@@ -667,7 +669,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			String URL = dataTable.getData("General_Data", "PRODUCT_URL");
 
 			driver.get(URL);
-
+			gc.scrollToElement(ProductDetailsPage.btnAddtoCartPDP);
 			wdu.waitUntilElementEnabled(ProductDetailsPage.btnAddtoCartPDP, 30);
 
 			if (driver.findElement(ProductDetailsPage.btnAddtoCartPDP).isDisplayed()) {
