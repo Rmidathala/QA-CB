@@ -1,6 +1,5 @@
 package businesscomponents;
 
-import java.awt.Robot;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.List;
@@ -10,8 +9,6 @@ import org.openqa.selenium.WebElement;
 
 import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
-import com.sun.glass.events.KeyEvent;
-
 import supportlibraries.ReusableLibrary;
 import supportlibraries.ScriptHelper;
 import uimap.ProductDetailsPage;

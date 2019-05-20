@@ -1,17 +1,13 @@
 
 package businesscomponents;
 
-import org.openqa.selenium.By;
-
 import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
 
 import supportlibraries.ReusableLibrary;
 import supportlibraries.ScriptHelper;
-import uimap.CheckOutPage;
 import uimap.HomePage;
 import uimap.MyAccountPage;
-import uimap.ProductDetailsPage;
 
 public class MyAccountPageComponent extends ReusableLibrary{
 	
@@ -38,8 +34,6 @@ public class MyAccountPageComponent extends ReusableLibrary{
 			
 			String firstname = dataTable.getData("General_Data", "FirstName");
 			String lastname = dataTable.getData("General_Data", "LastName");
-			
-			String email = dataTable.getData("General_Data", "Email");
 			String pass = dataTable.getData("General_Data", "Password");
 		
 			driver.findElement(HomePage.lnkMyAccount).click();
@@ -211,7 +205,6 @@ public class MyAccountPageComponent extends ReusableLibrary{
 			String firstname = dataTable.getData("General_Data", "FirstName");
 			String lastname = dataTable.getData("General_Data", "LastName");
 			String company = dataTable.getData("General_Data", "Company");
-			String email = dataTable.getData("General_Data", "Email");
 			String address1 = dataTable.getData("General_Data", "Address1");
 			String zip = dataTable.getData("General_Data", "Zip");
 			String city = dataTable.getData("General_Data", "City");
@@ -661,10 +654,7 @@ public class MyAccountPageComponent extends ReusableLibrary{
 			
 			String firstname = dataTable.getData("General_Data", "FirstName");
 			String lastname = dataTable.getData("General_Data", "LastName");
-			
-			String email = dataTable.getData("General_Data", "Email");
 			String pass = dataTable.getData("General_Data", "Password");
-		
 			driver.findElement(HomePage.lnkMyAccount).click();
 			wdu.waitUntilElementEnabled(HomePage.lnkCreateAccount, 30);
 		

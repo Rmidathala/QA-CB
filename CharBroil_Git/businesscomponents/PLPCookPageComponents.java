@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 
 import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
-import com.gargoylesoftware.htmlunit.javascript.host.Element;
-
 import supportlibraries.ReusableLibrary;
 import supportlibraries.ScriptHelper;
 import uimap.HomePage;

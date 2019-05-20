@@ -2,8 +2,6 @@ package businesscomponents;
 import supportlibraries.*;
 import uimap.TruinfraPage;
 
-import org.openqa.selenium.By;
-
 import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
 public class TruInfraRedLandingPageComponent extends ReusableLibrary {

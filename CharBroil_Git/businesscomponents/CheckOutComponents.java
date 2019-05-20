@@ -3,11 +3,7 @@ package businesscomponents;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
 
@@ -155,6 +151,9 @@ public class CheckOutComponents extends ReusableLibrary {
 			String expirationYear = dataTable.getData("General_Data", "CCExpirationYear");
 
 			driver.findElement(CheckOutPage.radioCreditCard).click();
+			Thread.sleep(1000);
+			driver.findElement(CheckOutPage.btnContinuePayment).click();
+			wdu.waitUntilPageReadyStateComplete(20);
 			wdu.waitUntilElementEnabled(CheckOutPage.txtCreditCardNumber, 15);
 			driver.findElement(CheckOutPage.txtCreditCardNumber).sendKeys(cardnumber);
 			Thread.sleep(1000);
@@ -169,8 +168,7 @@ public class CheckOutComponents extends ReusableLibrary {
 			// driver.findElement(CheckOutPage.selectExpirationMonth).sendKeys(expirationMonth);
 			// driver.findElement(CheckOutPage.selectExpirationYear).sendKeys(expirationYear);
 			gc.selectDropDown(CheckOutPage.selectExpirationYear, expirationYear);
-			Thread.sleep(1000);
-			driver.findElement(CheckOutPage.btnContinuePayment).click();
+			
 			gc.scrollToElement(CheckOutPage.btnPlaceOrder);
 			wdu.waitUntilElementEnabled(CheckOutPage.btnPlaceOrder, 15);
 			if (driver.findElement(CheckOutPage.btnPlaceOrder).isDisplayed()) {

@@ -13,7 +13,6 @@ import com.cognizant.framework.selenium.WebDriverUtil;
 import supportlibraries.ReusableLibrary;
 import supportlibraries.ScriptHelper;
 import uimap.CBSignature;
-import uimap.CBgas2coal;
 
 
 
@@ -692,7 +691,7 @@ public class ValidateCBSignature extends ReusableLibrary{
 				objWebd.highlightElement(CBSignature.ShopAllSignGrillsBtn);
 				String Btnname=driver.findElement (CBSignature.ShopAllSignGrillsBtn).getText();
 				driver.findElement (CBSignature.ShopAllSignGrillsBtn).click();
-				//System.out.println("SHOP All Signature Grill button is available and clicked "+ Btnname);
+				System.out.println("SHOP All Signature Grill button is available and clicked "+ Btnname);
 				Thread.sleep(500);
 
 				/*objWebd.highlightElement(CBSignature.SignatureSeriestext);

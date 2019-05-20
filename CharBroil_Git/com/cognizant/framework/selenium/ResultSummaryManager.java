@@ -236,6 +236,7 @@ public class ResultSummaryManager {
 					File f = new File(reportPath + "\\ErrorLog.txt");
 					java.awt.Desktop.getDesktop().edit(f);
 				} else {
+					@SuppressWarnings("unused")
 					File htmlFile = new File(reportPath
 							+ "\\HTML Results\\Summary.Html");
 					//java.awt.Desktop.getDesktop().browse(htmlFile.toURI());

@@ -13,7 +13,6 @@ import com.cognizant.framework.selenium.WebDriverUtil;
 import supportlibraries.ReusableLibrary;
 import supportlibraries.ScriptHelper;
 import uimap.CBSmartchef;
-import uimap.CBgas2coal;
 
 
 public class ValidateCBSmartchef extends ReusableLibrary{

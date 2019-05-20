@@ -27,8 +27,6 @@ public class PLPLearnPageComponents extends ReusableLibrary {
 	 */
 	public void validateLearnSubMenuPageHeader()	{
 		try	{
-			String shopSubCatg = dataTable.getData("General_Data", "SubMenuName");
-			
 			String currurl=driver.getCurrentUrl().toLowerCase();
 			if(currurl.contains("steak"))
 			{

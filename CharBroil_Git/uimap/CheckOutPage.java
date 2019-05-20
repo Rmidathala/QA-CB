@@ -26,11 +26,11 @@ public class CheckOutPage {
 	
 	public static final By lblPaymentInformation = By.xpath("//*[@id='opc-payment']/h2");
 	
-	public static final By txtCreditCardNumber = By.xpath("//*[@id='cybersource_card_processing_cc_number']");
-	public static final By selectCreditCardType = By.xpath("//*[@id='cybersource_card_processing_cc_type']");
-	public static final By txtVerificationNumber = By.xpath("//*[@id='cybersource_card_processing_cc_cid']");
-	public static final By selectExpirationMonth = By.xpath("//select[@name='payment[cc_exp_month]']");
-	public static final By selectExpirationYear = By.xpath("//*[@id='cybersource_card_processing_expiration_yr']");
+	public static final By txtCreditCardNumber = By.id("cybersourcesop_cc_number");
+	public static final By selectCreditCardType = By.id("cybersourcesop_cc_type");
+	public static final By txtVerificationNumber = By.id("cybersourcesop_cc_cid2");
+	public static final By selectExpirationMonth = By.id("cybersourcesop_expiration");
+	public static final By selectExpirationYear = By.id("cybersourcesop_expiration_yr");
 	
 	public static final By btnContinuePayment = By.xpath("//*[@id='payment-buttons-container']/button");
 	
@@ -42,7 +42,7 @@ public class CheckOutPage {
 	public static final By btnContinueCheckout = By.xpath("//button[@title='Continue']");
 	
 	public static final By radioPayPal = By.xpath("//input[@id='p_method_paypal_express']");
-	public static final By radioCreditCard = By.xpath("//input[@id='p_method_cybersource_card_processing']");
+	public static final By radioCreditCard = By.id("p_method_cybersourcesop");	
 	
 	
 	

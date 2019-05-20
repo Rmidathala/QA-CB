@@ -3,7 +3,6 @@ package businesscomponents;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import com.cognizant.framework.Status;
@@ -14,9 +13,6 @@ import supportlibraries.ScriptHelper;
 import uimap.CheckOutPage;
 import uimap.HomePage;
 import uimap.ProductDetailsPage;
-import uimap.ProductListingPage;
-import uimap.ProductRegistrationPage;
-import uimap.ShoppingCartPage;
 
 public class ProductDetailsPageComponents extends ReusableLibrary {
 
