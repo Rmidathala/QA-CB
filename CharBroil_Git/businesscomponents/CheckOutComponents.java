@@ -374,7 +374,7 @@ public class CheckOutComponents extends ReusableLibrary {
 			report.updateTestLog("Exception in validating billing info page alignment", "Exception is " + e,
 					Status.FAIL);
 		}
-
+		
 	}
 
 	/**********************************************************************************************************************************************************************/
