@@ -17,9 +17,10 @@ public class ShoppingCartPage {
 	public static final By selectCountry = By.xpath("//select[@id='country']");
 	public static final By selectState = By.xpath("//select[@id='region_id']");                                                //---- 55
 	public static final By selectPostalCode = By.xpath("//input[@id='postcode']");													//31902
+	public static final By selectCity = By.id("city");
 	public static final By btnCalculate = By.xpath("//button[contains(text(),'Calculate')]");
 	
-	public static final By lblShippingMethodList = By.xpath("//ul[@class='cart__shipping__methods__list']");
+	public static final By lblShippingMethodList = By.xpath("//dl[@class='cart__shipping__methods']");
 	
 	
 	public static final By lblShoppingCart = By.xpath("//h1[contains(text(),'Shopping Cart')]");

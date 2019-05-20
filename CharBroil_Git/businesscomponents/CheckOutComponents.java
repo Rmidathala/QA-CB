@@ -357,6 +357,7 @@ public class CheckOutComponents extends ReusableLibrary {
 		try {
 
 			driver.findElement(CheckOutPage.radioCreditCard).click();
+			driver.findElement(CheckOutPage.btnContinuePayment).click();
 			wdu.waitUntilElementEnabled(CheckOutPage.txtCreditCardNumber, 15);
 			wdu.waitUntilElementEnabled(CheckOutPage.selectCreditCardType, 15);
 			wdu.waitUntilElementEnabled(CheckOutPage.selectExpirationMonth, 15);

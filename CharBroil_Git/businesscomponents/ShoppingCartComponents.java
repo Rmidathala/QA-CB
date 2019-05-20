@@ -14,50 +14,38 @@ import uimap.ProductDetailsPage;
 import uimap.ShoppingCartPage;
 
 public class ShoppingCartComponents extends ReusableLibrary {
-	
-	WebDriverUtil wdu=new WebDriverUtil(driver);
-	GeneralComponents gc = new GeneralComponents(scriptHelper);
 
+	WebDriverUtil wdu = new WebDriverUtil(driver);
+	GeneralComponents gc = new GeneralComponents(scriptHelper);
 
 	public ShoppingCartComponents(ScriptHelper scriptHelper) {
 		super(scriptHelper);
 		// TODO Auto-generated constructor stub
 	}
 
-	
+	/*********************************************************
+	 * Click Shopping Cart Icon
+	 ***************************************************************************************/
 
-	
-/********************************************************* Click Shopping Cart Icon ***************************************************************************************/
-	
-	public void clickShoppingCartIcon() 
-	{
+	public void clickShoppingCartIcon() {
 
 		try {
 
-
 			wdu.waitUntilElementEnabled(HomePage.lnkCart, 30);
-			
+
 			driver.findElement(HomePage.lnkCart).click();
-			
+
 			wdu.waitUntilElementEnabled(ShoppingCartPage.lblShoppingCart, 30);
-			
-			
-			
 
-
-			if(driver.findElement(ShoppingCartPage.lblShoppingCart).isDisplayed())
-			{
-				report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is Successful", Status.PASS);
+			if (driver.findElement(ShoppingCartPage.lblShoppingCart).isDisplayed()) {
+				report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is Successful",
+						Status.PASS);
 			}
 
-
-			else
-			{
-				report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is not Successful", Status.FAIL);
+			else {
+				report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is not Successful",
+						Status.FAIL);
 			}
-
-
-
 
 		}
 
@@ -66,53 +54,31 @@ public class ShoppingCartComponents extends ReusableLibrary {
 			report.updateTestLog("Exception in clicking on Shopping Cart Icon", "Exception is " + e, Status.FAIL);
 		}
 
-
 	}
-		
-	
-	
-	
-	
-	
-	
-/*******************************************************************************************************************************************************************************/	
-	
 
-	
-	
+	/*******************************************************************************************************************************************************************************/
+
 //*********************************************************** Validate Breadcumb in Shopping cart page ****************************************************************/
-	
-	
-	
-	public void validateShoppingCartBreadcumb() 
-	{
+
+	public void validateShoppingCartBreadcumb() {
 
 		try {
 
-
 			wdu.waitUntilElementEnabled(CheckOutPage.lnkBreadCrumbHome, 30);
-			
+
 			driver.findElement(CheckOutPage.lnkBreadCrumbHome).click();
-			
+
 			wdu.waitUntilElementEnabled(CheckOutPage.imgHeroHome, 30);
-			
-			
-			
 
-
-			if(driver.findElement(CheckOutPage.imgHeroHome).isDisplayed())
-			{
-				report.updateTestLog("Validate Shopping Cart Breadcumb", "Validating Shopping cart Breadcumb is Successful", Status.PASS);
+			if (driver.findElement(CheckOutPage.imgHeroHome).isDisplayed()) {
+				report.updateTestLog("Validate Shopping Cart Breadcumb",
+						"Validating Shopping cart Breadcumb is Successful", Status.PASS);
 			}
 
-
-			else
-			{
-				report.updateTestLog("Click Shopping Cart", "Validating Shopping cart Breadcumb is not Successful", Status.FAIL);
+			else {
+				report.updateTestLog("Click Shopping Cart", "Validating Shopping cart Breadcumb is not Successful",
+						Status.FAIL);
 			}
-
-
-
 
 		}
 
@@ -121,208 +87,124 @@ public class ShoppingCartComponents extends ReusableLibrary {
 			report.updateTestLog("Exception in validating Shopping Cart breadcumb", "Exception is " + e, Status.FAIL);
 		}
 
+	}
+
+	/***********************************************************************************************************************************************************************/
+
+//*********************************************************** Validate Continue shopping button in Shopping cart page ****************************************************************/
+
+	public void validateContinueShoppingButton() {
+
+		try {
+
+			wdu.waitUntilElementEnabled(ShoppingCartPage.continueShopping, 30);
+
+			driver.findElement(ShoppingCartPage.continueShopping).click();
+
+			wdu.waitUntilElementEnabled(CheckOutPage.imgHeroHome, 30);
+
+			if (driver.findElement(CheckOutPage.imgHeroHome).isDisplayed()) {
+				report.updateTestLog("Validate Continue Shopping button",
+						"Validating Continue Shopping button is Successful", Status.PASS);
+			}
+
+			else {
+				report.updateTestLog("Validate Continue Shopping button",
+						"Validating Continue Shopping button  is not Successful", Status.FAIL);
+			}
+
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in validating Continue shopping Button", "Exception is " + e, Status.FAIL);
+		}
 
 	}
-	
-	
-	
 
-	
-	
-/***********************************************************************************************************************************************************************/	
-	
-	
-	
-	
+	/**************************************************************************************************************************************************************************************/
+
 //*********************************************************** Validate Continue shopping button in Shopping cart page ****************************************************************/
-	
-	
-	
-		public void validateContinueShoppingButton() 
-		{
 
-			try {
+	public void validateProceedCheckoutButton() {
 
+		try {
 
-				wdu.waitUntilElementEnabled(ShoppingCartPage.continueShopping, 30);
-				
-				driver.findElement(ShoppingCartPage.continueShopping).click();
-				
-				wdu.waitUntilElementEnabled(CheckOutPage.imgHeroHome, 30);
-				
-				
-				
+			wdu.waitUntilElementEnabled(CheckOutPage.btnProceedToCheckout, 30);
 
+			driver.findElement(CheckOutPage.btnProceedToCheckout).click();
 
-				if(driver.findElement(CheckOutPage.imgHeroHome).isDisplayed())
-				{
-					report.updateTestLog("Validate Continue Shopping button", "Validating Continue Shopping button is Successful", Status.PASS);
-				}
+			wdu.waitUntilElementEnabled(CheckOutPage.lblCheckoutHeader, 30);
 
-
-				else
-				{
-					report.updateTestLog("Validate Continue Shopping button", "Validating Continue Shopping button  is not Successful", Status.FAIL);
-				}
-
-
-
-
+			if (driver.findElement(CheckOutPage.lblCheckoutHeader).isDisplayed()) {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button is Successful", Status.PASS);
 			}
 
-			catch (Exception e) {
-				e.printStackTrace();
-				report.updateTestLog("Exception in validating Continue shopping Button", "Exception is " + e, Status.FAIL);
+			else {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button  is not Successful", Status.FAIL);
 			}
 
+		}
 
-		}	
-	
-	
-/**************************************************************************************************************************************************************************************/	
-	
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
+		}
 
-		
-		
-		
-		
-		
-		
+	}
+
+	/**************************************************************************************************************************************************************************************/
+
 //*********************************************************** Validate Continue shopping button in Shopping cart page ****************************************************************/
-		
-		
-		
-		public void validateProceedCheckoutButton() 
-		{
 
-			try {
+	public void validateProductinShoppingCart() {
 
+		try {
 
+			wdu.waitUntilElementEnabled(ShoppingCartPage.lnkProduct, 30);
 
-				wdu.waitUntilElementEnabled(CheckOutPage.btnProceedToCheckout, 30);
-				
-				driver.findElement(CheckOutPage.btnProceedToCheckout).click();
-				
-				wdu.waitUntilElementEnabled(CheckOutPage.lblCheckoutHeader, 30);
-				
-				
-				
+			String linkText = driver.findElement(ShoppingCartPage.lnkProduct).getText();
+			driver.findElement(ShoppingCartPage.lnkProduct).click();
 
+			wdu.waitUntilElementEnabled(ProductDetailsPage.lblProductHeader, 40);
 
-				if(driver.findElement(CheckOutPage.lblCheckoutHeader).isDisplayed())
-				{
-					report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button is Successful", Status.PASS);
-				}
-
-
-				else
-				{
-					report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button  is not Successful", Status.FAIL);
-				}
-
-
-
-
+			if (driver.findElement(ProductDetailsPage.lblProductHeader).getText().contains(linkText)) {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button is Successful", Status.PASS);
 			}
 
-			catch (Exception e) {
-				e.printStackTrace();
-				report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
+			else {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button  is not Successful", Status.FAIL);
 			}
 
+		}
 
-		}	
-	
-	
-/**************************************************************************************************************************************************************************************/	
-		
-		
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
+		}
 
-		
-		
-		
-		
-		
-		
-		
+	}
+
+	/**************************************************************************************************************************************************************************************/
+
 //*********************************************************** Validate Continue shopping button in Shopping cart page ****************************************************************/
-		
-		
-		
-				public void validateProductinShoppingCart() 
-				{
 
-					try {
+	public void validateProductQuantityinShoppingCart() {
 
+		try {
 
+			String qty = dataTable.getData("General_Data", "Quantity");
 
-						
-						wdu.waitUntilElementEnabled(ShoppingCartPage.lnkProduct, 30);
-						
-						String linkText = driver.findElement(ShoppingCartPage.lnkProduct).getText();
-						driver.findElement(ShoppingCartPage.lnkProduct).click();
-						
-						wdu.waitUntilElementEnabled(ProductDetailsPage.lblProductHeader, 40);
-						
-						
-						
+			wdu.waitUntilElementEnabled(ShoppingCartPage.selectProductQuantity, 30);
 
+			gc.selectDropDown(ShoppingCartPage.selectProductQuantity, qty);
 
-						if(driver.findElement(ProductDetailsPage.lblProductHeader).getText().contains(linkText))
-						{
-							report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button is Successful", Status.PASS);
-						}
+			Thread.sleep(7000);
 
-
-						else
-						{
-							report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button  is not Successful", Status.FAIL);
-						}
-
-
-
-
-					}
-
-					catch (Exception e) {
-						e.printStackTrace();
-						report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
-					}
-
-
-				}	
-			
-			
-/**************************************************************************************************************************************************************************************/		
-		
-				
-				
-				
-				
-
-				
-				
-//*********************************************************** Validate Continue shopping button in Shopping cart page ****************************************************************/
-				
-				
-				
-				public void validateProductQuantityinShoppingCart() 
-				{
-
-					try {
-
-								
-						
-						String qty = dataTable.getData("General_Data", "Quantity");
-						
-						
-						wdu.waitUntilElementEnabled(ShoppingCartPage.selectProductQuantity, 30);
-						
-						gc.selectDropDown(ShoppingCartPage.selectProductQuantity, qty);
-						
-						Thread.sleep(7000);
-						
-						
 //						int quantity = Integer.parseInt(qty);
 //						
 //						
@@ -349,290 +231,194 @@ public class ShoppingCartComponents extends ReusableLibrary {
 //						String subTotal = subTotal1.trim();
 //						
 //						int subTotalFinal = Integer.parseInt(subTotal);
-						
-						
-						String selected = gc.getFirstSelectedValue(ShoppingCartPage.selectProductQuantity);
 
+			String selected = gc.getFirstSelectedValue(ShoppingCartPage.selectProductQuantity);
 
-						if(selected.contains(qty))
-						{
-							report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button is Successful", Status.PASS);
-						}
+			if (selected.contains(qty)) {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button is Successful", Status.PASS);
+			}
 
+			else {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button  is not Successful", Status.FAIL);
+			}
 
-						else
-						{
-							report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button  is not Successful", Status.FAIL);
-						}
+		}
 
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
+		}
 
+	}
 
+	/**************************************************************************************************************************************************************************************/
 
-					}
-
-					catch (Exception e) {
-						e.printStackTrace();
-						report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
-					}
-
-
-				}	
-			
-			
-/**************************************************************************************************************************************************************************************/		
-		
-				
-
-				
-
-				
-				
 //*********************************************************** Validate delete product in Shopping cart page ********************************************************************/
-				
-				
-				
-				public void validateDeleteProductShoppingCart() 
-				{
 
-					try {
+	public void validateDeleteProductShoppingCart() {
 
+		try {
 
-						wdu.waitUntilElementEnabled(ShoppingCartPage.lnkDeleteProduct, 30);
-						
-						driver.findElement(ShoppingCartPage.lnkDeleteProduct).click();
-						
-						wdu.waitUntilElementEnabled(ShoppingCartPage.lblEmptyShoppingCart, 40);
-						
-						
-						
+			wdu.waitUntilElementEnabled(ShoppingCartPage.lnkDeleteProduct, 30);
 
+			driver.findElement(ShoppingCartPage.lnkDeleteProduct).click();
 
-						if(driver.findElement(ShoppingCartPage.lblEmptyShoppingCart).isDisplayed())
-						{
-							report.updateTestLog("Validate Delete Product", "Validating Delete product option is Successful", Status.PASS);
-						}
+			wdu.waitUntilElementEnabled(ShoppingCartPage.lblEmptyShoppingCart, 40);
 
+			if (driver.findElement(ShoppingCartPage.lblEmptyShoppingCart).isDisplayed()) {
+				report.updateTestLog("Validate Delete Product", "Validating Delete product option is Successful",
+						Status.PASS);
+			}
 
-						else
-						{
-							report.updateTestLog("Validate Delete Product", "Validating Delete product option is not Successful", Status.FAIL);
-						}
+			else {
+				report.updateTestLog("Validate Delete Product", "Validating Delete product option is not Successful",
+						Status.FAIL);
+			}
 
+		}
 
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in validating delete product option in shopping cart", "Exception is " + e,
+					Status.FAIL);
+		}
 
+	}
 
-					}
+	/********************************************************************************************************************************************************************************/
 
-					catch (Exception e) {
-						e.printStackTrace();
-						report.updateTestLog("Exception in validating delete product option in shopping cart", "Exception is " + e, Status.FAIL);
-					}
-
-
-				}	
-			
-			
-/********************************************************************************************************************************************************************************/		
-		
-				
-				
-				
-	
-				
 //*********************************************************** Validate delete product in Shopping cart page ****************************************************************/
-				
-				
-				
-				public void validateEstimateShipping() 
-				{
 
-					try {
+	public void validateEstimateShipping() {
 
-						String country = "US";
-						String state ="55";
-						String postalCode = "31902";
+		try {
 
-						
-						wdu.waitUntilElementEnabled(ShoppingCartPage.selectCountry, 30);
-						
-						gc.selectDropDown(ShoppingCartPage.selectCountry, country);
-						
-						Thread.sleep(3000);
-						gc.selectDropDown(ShoppingCartPage.selectState, state);
-						Thread.sleep(3000);
-						driver.findElement(ShoppingCartPage.selectPostalCode).sendKeys(postalCode);
-						Thread.sleep(3000);
-						
-						driver.findElement(ShoppingCartPage.btnCalculate).click();
-						
-						
-						
-						
-						wdu.waitUntilElementEnabled(ShoppingCartPage.lblShippingMethodList, 40);
-						
-						
-						
+			String country = "US";
+			String state = "55";
+			String postalCode = "31902";
+			String city = "Columbus";
 
+			wdu.waitUntilElementEnabled(ShoppingCartPage.selectCountry, 30);
 
-						if(driver.findElement(ShoppingCartPage.lblShippingMethodList).isDisplayed())
-						{
-							report.updateTestLog("Validate Estimate Shipping", "Validating Estimate Shipping is Successful", Status.PASS);
-						}
+			gc.selectDropDown(ShoppingCartPage.selectCountry, country);
 
+			Thread.sleep(3000);
+			gc.selectDropDown(ShoppingCartPage.selectState, state);
+			Thread.sleep(3000);
+			driver.findElement(ShoppingCartPage.selectCity).sendKeys(city);
+			driver.findElement(ShoppingCartPage.selectPostalCode).sendKeys(postalCode);
 
-						else
-						{
-							report.updateTestLog("Validate Estimate Shipping", "Validating Estimate Shipping is not Successful", Status.FAIL);
-						}
+			driver.findElement(ShoppingCartPage.btnCalculate).click();
 
+			wdu.waitUntilElementVisible(ShoppingCartPage.lblShippingMethodList, 40);
 
+			if (driver.findElement(ShoppingCartPage.lblShippingMethodList).isDisplayed()) {
+				report.updateTestLog("Validate Estimate Shipping", "Validating Estimate Shipping is Successful",
+						Status.PASS);
+			}
 
+			else {
+				report.updateTestLog("Validate Estimate Shipping", "Validating Estimate Shipping is not Successful",
+						Status.FAIL);
+			}
 
-					}
+		}
 
-					catch (Exception e) {
-						e.printStackTrace();
-						report.updateTestLog("Exception in validating Estimate Shipping in shopping cart", "Exception is " + e, Status.FAIL);
-					}
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in validating Estimate Shipping in shopping cart", "Exception is " + e,
+					Status.FAIL);
+		}
 
+	}
 
-				}	
-			
-			
-/*****************************************************************************************************************************************************************************/		
-		
-					
-				
-				
+	/*****************************************************************************************************************************************************************************/
+
 //*********************************************************** Validate Continue shopping button in Shopping cart page ****************************************************************/
-				
-				
-				
-				public void validateProductQuantityinShoppingCartWithPDP() 
-				{
 
-					try {
+	public void validateProductQuantityinShoppingCartWithPDP() {
 
-								
-						
-						String qty = dataTable.getData("General_Data", "Quantity");
-						
-						
-						wdu.waitUntilElementEnabled(ShoppingCartPage.selectProductQuantity, 30);
-						
-						
-						
-						Thread.sleep(7000);
-						
-	
-						
-						String selected = gc.getFirstSelectedValue(ShoppingCartPage.selectProductQuantity);
+		try {
 
+			String qty = dataTable.getData("General_Data", "Quantity");
 
-						if(selected.contains(qty))
-						{
-							report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button is Successful", Status.PASS);
-						}
+			wdu.waitUntilElementEnabled(ShoppingCartPage.selectProductQuantity, 30);
 
+			Thread.sleep(7000);
 
-						else
-						{
-							report.updateTestLog("Validate Proceed Checkout button", "Validating Proceed Checkout button  is not Successful", Status.FAIL);
-						}
+			String selected = gc.getFirstSelectedValue(ShoppingCartPage.selectProductQuantity);
 
+			if (selected.contains(qty)) {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button is Successful", Status.PASS);
+			}
 
+			else {
+				report.updateTestLog("Validate Proceed Checkout button",
+						"Validating Proceed Checkout button  is not Successful", Status.FAIL);
+			}
 
+		}
 
-					}
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
+		}
 
-					catch (Exception e) {
-						e.printStackTrace();
-						report.updateTestLog("Exception in validating Proceed Checkout Button", "Exception is " + e, Status.FAIL);
-					}
+	}
 
+	/*********************************************************
+	 * Click Shopping Cart Icon
+	 ***************************************************************************************/
 
-				}	
-			
-			
+	public void validateShoppingCart() {
 
-		
-				
-				/********************************************************* Click Shopping Cart Icon ***************************************************************************************/
-				
-				public void validateShoppingCart() 
-				{
+		try {
 
-					try {
-
-
-						wdu.waitUntilElementEnabled(HomePage.lnkCart, 30);
-						int prodcount=Integer.parseInt(driver.findElement(HomePage.lnkCart).getText());
-						driver.findElement(HomePage.lnkCart).click();
-						wdu.waitUntilElementEnabled(ShoppingCartPage.lblShoppingCart, 30);
-						if(driver.findElement(ShoppingCartPage.lblShoppingCart).isDisplayed())
-						{
-							report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is Successful", Status.PASS);
-							List<WebElement> rows = driver.findElements(ShoppingCartPage.ShoppingCartCount);
-							System.out.println(rows.size());
-							if(rows.size()==prodcount)
-							{
-								report.updateTestLog("Shopping Cart", "Number of items in Shopping cart : "+prodcount, Status.PASS);	
-							}
-							else
-							{
-								report.updateTestLog("Shopping Cart", "Product count mismatch in shopping cart ", Status.FAIL);	
-							}
-							
-							if(driver.findElement(ShoppingCartPage.imgFirstProduct).isDisplayed())
-							{
-								String aligntext=driver.findElement(ShoppingCartPage.imgFirstProduct).getCssValue("text-align").toLowerCase();
-								if(aligntext.contains("left"))
-									report.updateTestLog("Shopping Cart", "Product images are aligned in the "+aligntext+" side of the page", Status.PASS);	
-								else
-									report.updateTestLog("Shopping Cart", "Product images are anot aligned properly", Status.FAIL);	
-							}
-							
-							
-						}
-
-						else
-						{
-							report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is not Successful", Status.FAIL);
-						}
-						
-						
-						
-						
-						
-						
-
-
-						
-
-
-
-
-					}
-
-					catch (Exception e) {
-						e.printStackTrace();
-						report.updateTestLog("Exception in clicking on Shopping Cart Icon", "Exception is " + e, Status.FAIL);
-					}
-
-
+			wdu.waitUntilElementEnabled(HomePage.lnkCart, 30);
+			int prodcount = Integer.parseInt(driver.findElement(HomePage.lnkCart).getText());
+			driver.findElement(HomePage.lnkCart).click();
+			wdu.waitUntilElementEnabled(ShoppingCartPage.lblShoppingCart, 30);
+			if (driver.findElement(ShoppingCartPage.lblShoppingCart).isDisplayed()) {
+				report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is Successful",
+						Status.PASS);
+				List<WebElement> rows = driver.findElements(ShoppingCartPage.ShoppingCartCount);
+				System.out.println(rows.size());
+				if (rows.size() == prodcount) {
+					report.updateTestLog("Shopping Cart", "Number of items in Shopping cart : " + prodcount,
+							Status.PASS);
+				} else {
+					report.updateTestLog("Shopping Cart", "Product count mismatch in shopping cart ", Status.FAIL);
 				}
-					
-				
-				
-				
-				
-				
-				
-			/*******************************************************************************************************************************************************************************/	
-				
-		
-		
-		
-		
-	
+
+				if (driver.findElement(ShoppingCartPage.imgFirstProduct).isDisplayed()) {
+					String aligntext = driver.findElement(ShoppingCartPage.imgFirstProduct).getCssValue("text-align")
+							.toLowerCase();
+					if (aligntext.contains("left"))
+						report.updateTestLog("Shopping Cart",
+								"Product images are aligned in the " + aligntext + " side of the page", Status.PASS);
+					else
+						report.updateTestLog("Shopping Cart", "Product images are anot aligned properly", Status.FAIL);
+				}
+
+			}
+
+			else {
+				report.updateTestLog("Click Shopping Cart", "Clicking on Shopping cart icon is not Successful",
+						Status.FAIL);
+			}
+
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+			report.updateTestLog("Exception in clicking on Shopping Cart Icon", "Exception is " + e, Status.FAIL);
+		}
+
+	}
+
+	/*******************************************************************************************************************************************************************************/
+
 }
