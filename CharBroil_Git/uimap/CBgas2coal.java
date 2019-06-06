@@ -7,7 +7,7 @@ public class CBgas2coal {
 	public static final By ShopNowBtn = By.xpath("//*[text()='Shop Now']");
 	
 	//public static final By Productname = By.xpath("//*[@id='product_addtocart_form']/div/div[3]/div[1]/h1");
-	public static final By Productname = By.xpath("//*[@id='product_addtocart_form']/div[2]/h1");
+	public static final By Productname = By.xpath("//*[@id=\"instant-search-results-container-product\"]/div/div[1]/div[1]/div/a/div/div[4]/h3");
 	
 	public static final By ProdutBreadCrumb = By.xpath("//*[@class='breadcrumb breadcrumbs']");
 	

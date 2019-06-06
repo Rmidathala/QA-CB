@@ -198,7 +198,7 @@ public class ValidateCBgas2coal extends ReusableLibrary {
 				for(int count=1 ; count<=5 ; count++ )	{
 					String url=driver.getCurrentUrl();
 
-					if(url.equalsIgnoreCase("https://www.charbroil.com/gas2coal-hybrid-grill")){
+					if(url.contains("https://www.charbroil.com/grills/hybrid-grills")){
 						objWebd.waitUntilElementEnabled(CBgas2coal.Productname, 30);
 						String productname = driver.findElement(CBgas2coal.Productname).getText();
 						if(productname.contains("GAS2COAL"))						
