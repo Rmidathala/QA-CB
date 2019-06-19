@@ -61,7 +61,7 @@ public class MyAccountPage {
 	public static final By lblNewsletterSubscription = By.xpath("//h2[contains(text(),'Newsletter Subscription')]");
 	public static final By txtEmailAcc = By.xpath("//input[@id='email']");
 	//public static final By lnkLogout = By.xpath("//div[@class='top-links hidden-md-down']/div/div[5]/a");
-	public static final By lnkLogout = By.xpath("//div[@class='top-links hidden-md-down']/div/div[4]/a");
+	public static final By lnkLogout = By.xpath("(//a[text()='Logout'])[1]");
 	
 	public static final By lblBlankFirstNameError = By.xpath("//li[@class='error-msg']//li[1]/span");
 	public static final By lblBlankLastNameError = By.xpath("//li[@class='error-msg']//li[3]/span");

@@ -35,7 +35,7 @@ public class CheckOutPage {
 	public static final By btnContinuePayment = By.xpath("//*[@id='payment-buttons-container']/button");
 	
 	public static final By btnPlaceOrder = By.xpath("//button[@title='Place Order']");
-	public static final By lnkLoginFromCheckout = By.xpath("//*[contains(text(),'Login to your account')]");
+	public static final By lnkLoginFromCheckout = By.xpath("//a[text()='Login to your account']");
 	public static final By txtUserNameCheckout = By.xpath("//input[@id='login-email']");
 	public static final By txtPasswordCheckout = By.xpath("//input[@id='login-password']");
 	public static final By btnLoginCheckout = By.xpath("//*[@id='login-form']/div[3]/div/div/button");
