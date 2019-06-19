@@ -71,7 +71,7 @@ public class HomePage {
 
 	//Arka
 	public static final By txtSearchItemHomePage = By.xpath("//div[@class='desktop-search']//span[1]/input");
-	public static final By lnkMyAccount = By.xpath("//*[@id='header-wrapper']/div[1]/div/div[3]/a");
+	public static final By lnkMyAccount = By.xpath("(//a[@title='My Account'])[1]");
 	public static final By lnkCreateAccount = By.xpath("//a[@title='Create an Account']");
 
 
