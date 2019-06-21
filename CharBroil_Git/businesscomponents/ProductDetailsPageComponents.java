@@ -848,8 +848,7 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 
 		try {
 
-			String mainWindowHandle = driver.getWindowHandle();
-			String modelNumber = driver.findElement(ProductDetailsPage.lblModelNumber).getText();
+			String productName = driver.findElement(ProductDetailsPage.lblProductName).getText();
 
 			wdu.waitUntilElementEnabled(ProductDetailsPage.btnWhereToBuy, 30);
 			driver.findElement(ProductDetailsPage.btnWhereToBuy).click();
@@ -857,30 +856,18 @@ public class ProductDetailsPageComponents extends ReusableLibrary {
 			wdu.waitUntilElementEnabled(ProductDetailsPage.divOnlineSeller, 30);
 			wdu.waitUntilElementEnabled(ProductDetailsPage.priceSpiderCharbroil, 30);
 			driver.findElement(ProductDetailsPage.priceSpiderCharbroil).click();
+			//wdu.waitUntilElementEnabled(ProductDetailsPage.lblModelNumber, 20);
 
-			Thread.sleep(3000);
-			for (String handle : driver.getWindowHandles()) {
-				if (!handle.equals(mainWindowHandle)) {
-					driver.switchTo().window(handle);
+			String productNameOnPriceSpider = driver.findElement(ProductDetailsPage.lblProductNameOfPriceSpider).getText();
 
-					wdu.waitUntilElementEnabled(ProductDetailsPage.lblModelNumber, 20);
-
-					String modelnumberOnline = driver.findElement(ProductDetailsPage.lblModelNumber).getText();
-
-					if (modelNumber.contains(modelnumberOnline)) {
-						report.updateTestLog("Validate Online Price Spider", "Model Number matched", Status.PASS);
-					}
-
-					else {
-						report.updateTestLog("Validate Online Price Spider", "Model Number is not matched",
-								Status.PASS);
-					}
-
-					driver.close();
-				}
+			if (productName.contains(productNameOnPriceSpider)) {
+				report.updateTestLog("Validate Online Price Spider", "Model Number matched", Status.PASS);
 			}
-			driver.switchTo().window(mainWindowHandle);
 
+			else {
+				report.updateTestLog("Validate Online Price Spider", "Model Number is not matched",
+						Status.PASS);
+			}
 		}
 
 		catch (Exception e) {

@@ -17,7 +17,9 @@ public class ProductDetailsPage {
 	public static final By lblModelNumber = By.xpath("//h5[@class='Product-summary__model']");
 	public static final By selectQuantity = By.xpath("//select[@id='qty']");
 	public static final By lblProductDescription = By.xpath("//div[@class='Product-summary__description']");
+	public static final By lblProductName = By.xpath("//h1[@class='Product-summary__name']");
 	
+	public static final By lblProductNameOfPriceSpider = By.xpath("//div[@class='ps-product-details-title']");
 	
 	//public static final By btnWhereToBuy = By.xpath("//span[@class='ps-button-label']"); 
 	
@@ -78,7 +80,7 @@ public class ProductDetailsPage {
 	public static final By chkAllPartsPDP = By.xpath("//input[@type='checkbox']");
 	public static final By WebElementProductsInCart = By.xpath("//div[@class='cart__item cart-item']");
 	public static final By WebElementFindParts = By.xpath("//div[@class='partfinder-tab__anchor-desktop__top']/i");
-	public static final By txtFindPart = By.xpath("//input[@id='partfinder']");
+	public static final By txtFindPart = By.xpath("//input[@name='partfinder-request']");
 	public static final By btnSearchFindPart = By.xpath("//div[@class='partfinder__input--submit']");
 	public static final By lnkZoomPDP = By.xpath("//div[@class='product-media__zoom']/i");
 	public static final By lnkZoomModalPDP = By.xpath("//div[@class='modal-content']");
@@ -91,7 +93,7 @@ public class ProductDetailsPage {
 	public static final By divRatingAndReviewCustomerImageList = By.xpath("//div[@class='fm-output fm-modern']/div//img");
 	public static final By lnkRatingAndReviewExpand = By.xpath("//div[contains(text(),'Ratings & Reviews')]/div/div");
 	
-	public static final By priceSpiderCharbroil = By.xpath("//img[@title='Char-Broil']");
+	public static final By priceSpiderCharbroil = By.xpath("//div[@class='ps-header-left']/img");
 	
 	
 	

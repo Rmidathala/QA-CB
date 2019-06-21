@@ -66,7 +66,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/gas/gas-regulator-tripped"))	{
+				if(driver.getCurrentUrl().contains("/gas-regulator-tripped/"))	{
 					report.updateTestLog("Support Page", "Gas regulator tripped link opened.", Status.PASS);
 					break;
 				}
@@ -90,7 +90,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/gas/bad-propane-tank-connection"))	{
+				if(driver.getCurrentUrl().contains("/bad-propane-tank-connection/"))	{
 					report.updateTestLog("Support Page", "Bad propane tank connection link opened.", Status.PASS);
 					break;
 				}
@@ -114,7 +114,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/gas/flames-blow-out-because-of-wind"))	{
+				if(driver.getCurrentUrl().contains("/flames-blow-out-because-of-wind/"))	{
 					report.updateTestLog("Support Page", "Flames blow out because of wind link opened.", Status.PASS);
 					break;
 				}
@@ -150,7 +150,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/charcoal/residue-in-grill"))	{
+				if(driver.getCurrentUrl().contains("/residue-in-grill"))	{
 					report.updateTestLog("Support Page", "Residue in grill link opened.", Status.PASS);
 					break;
 				}
@@ -173,7 +173,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/charcoal/charcoal-temperature-wont-regulate"))	{
+				if(driver.getCurrentUrl().contains("/charcoal-temperature-wont-regulate"))	{
 					report.updateTestLog("Support Page", "Charcoal temperature won't regulate link opened.", Status.PASS);
 					break;
 				}
@@ -207,7 +207,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/smartchef/use-an-extension-cord"))	{
+				if(driver.getCurrentUrl().contains("/use-an-extension-cord"))	{
 					report.updateTestLog("Support Page", "Extension cord is wrong link opened.", Status.PASS);
 					break;
 				}
@@ -231,7 +231,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/electric/grill-isnt-heating"))	{
+				if(driver.getCurrentUrl().contains("/grill-isnt-heating"))	{
 					report.updateTestLog("Support Page", "Grill isn't heating link opened.", Status.PASS);
 					break;
 				}
@@ -255,7 +255,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			Thread.sleep(2000);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/electric/grill-stopped-working"))	{
+				if(driver.getCurrentUrl().contains("/grill-stopped-working"))	{
 					report.updateTestLog("Support Page", "Grill stopped working link opened.", Status.PASS);
 					break;
 				}
@@ -290,7 +290,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Residue in smoker link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/smoker-roaster/residue-in-smoker"))	{
+				if(driver.getCurrentUrl().contains("/residue-in-smoker"))	{
 					report.updateTestLog("Support Page", "Residue in smoker link opened.", Status.PASS);
 					break;
 				}
@@ -313,7 +313,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Water smoker not working link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/smoker-roaster/water-smoker-not-working"))	{
+				if(driver.getCurrentUrl().contains("/water-smoker-not-working"))	{
 					report.updateTestLog("Support Page", "Water smoker not working link opened.", Status.PASS);
 					break;
 				}
@@ -347,7 +347,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Preventing low flames on your gas grill link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/smartchef/use-an-extension-cord"))	{
+				if(driver.getCurrentUrl().contains("/use-an-extension-cord"))	{
 					report.updateTestLog("Support Page", "Preventing low flames on your gas grill link opened.", Status.PASS);
 					break;
 				}
@@ -369,7 +369,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Grilling Guides link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/electric/grill-isnt-heating"))	{
+				if(driver.getCurrentUrl().contains("/grill-isnt-heating"))	{
 					report.updateTestLog("Support Page", "Grilling Guides link opened.", Status.PASS);
 					break;
 				}
@@ -391,7 +391,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Digital Electric Smoker SmartChef Operations Guide link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/electric/grill-stopped-working"))	{
+				if(driver.getCurrentUrl().contains("/grill-stopped-working"))	{
 					report.updateTestLog("Support Page", "Digital Electric Smoker SmartChef Operations Guide link opened.", Status.PASS);
 					break;
 				}
@@ -425,7 +425,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Lid won't close on rotisserie link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/accessories/lid-wont-close-on-rotisserie"))	{
+				if(driver.getCurrentUrl().contains("/lid-wont-close-on-rotisserie"))	{
 					report.updateTestLog("Support Page", "Lid won't close on rotisserie link opened.", Status.PASS);
 					break;
 				}
@@ -448,7 +448,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Spit rod not turning link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/accessories/spit-rod-not-turning"))	{
+				if(driver.getCurrentUrl().contains("/spit-rod-not-turning"))	{
 					report.updateTestLog("Support Page", "Spit rod not turning link opened.", Status.PASS);
 					break;
 				}
@@ -471,7 +471,7 @@ public class SupportPageComponents extends ReusableLibrary {
 			report.updateTestLog("Support Page", "Rotisserie overloaded link clicked.", Status.DONE);
 
 			for(int count=1 ; count<=5 ; count++ )	{
-				if(driver.getCurrentUrl().contains("/help/accessories/rotisserie-overloaded"))	{
+				if(driver.getCurrentUrl().contains("/rotisserie-overloaded"))	{
 					report.updateTestLog("Support Page", "Rotisserie overloaded link opened.", Status.PASS);
 					break;
 				}

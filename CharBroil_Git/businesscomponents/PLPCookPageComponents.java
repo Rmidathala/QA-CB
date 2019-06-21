@@ -293,7 +293,7 @@ public class PLPCookPageComponents extends ReusableLibrary {
 			wdu.waitUntilElementEnabled(PLPCookPage.linkRecipeYouMightAlsoLikeTitle, 10);
 			gc.scrollToElement(PLPCookPage.linkRecipeYouMightAlsoLikeTitle);
 			wdu.highlightElement(PLPCookPage.linkRecipeYouMightAlsoLikeTitle);
-			if(driver.findElement(PLPCookPage.linkRecipeYouMightAlsoLikeTitle).getText().equalsIgnoreCase("You might also like these recipes:"))
+			if(driver.findElement(PLPCookPage.linkRecipeYouMightAlsoLikeTitle).getText().equalsIgnoreCase("View More Recipes Like This"))
 				report.updateTestLog("Recipe screen", "You Might Also Like these recipes section is showing.", Status.PASS);
 			else
 				report.updateTestLog("Recipe screen", "You Might Also Like these recipes section is not showing.", Status.FAIL);
@@ -303,13 +303,14 @@ public class PLPCookPageComponents extends ReusableLibrary {
 			wdu.waitUntilElementEnabled(PLPCookPage.linkRecipeYouMightAlsoLikeTags, 10);
 			gc.scrollToElement(PLPCookPage.linkRecipeYouMightAlsoLikeTags);
 			List<WebElement> findElements = driver.findElements(PLPCookPage.linkRecipeYouMightAlsoLikeTags);
-			for (WebElement webElement : findElements) {
-				String tagName = webElement.getText();
+			for (int i=0;i<findElements.size();i++) {
+				String tagName = findElements.get(i).getText();
 				
-				webElement.click();
+				findElements.get(i).click();
 				Thread.sleep(2000);
 				report.updateTestLog("Recipe page", "Clicked on tag - "+tagName, Status.PASS);
-			
+				driver.navigate().back();
+				findElements = driver.findElements(PLPCookPage.linkRecipeYouMightAlsoLikeTags);
 				/*if(driver.getCurrentUrl().contains("Fruit"))
 					report.updateTestLog("Recipe page", "Navigated to page associated with tag "+tagName, Status.PASS);
 				else
@@ -344,11 +345,14 @@ public class PLPCookPageComponents extends ReusableLibrary {
 			driver.findElement(PLPCookPage.btnViewAllRecipes).click();
 			report.updateTestLog("Cook page", "Clicked on View All Recipes button.", Status.PASS);
 
-			//Verify 'TAG' category is present
-			wdu.waitUntilElementEnabled(PLPCookPage.linkTagCategory, 10);
-			gc.scrollToElement(PLPCookPage.linkTagCategory);
-			wdu.highlightElement(PLPCookPage.linkTagCategory);
-			report.updateTestLog("Cook page", "Category Tag is present in the screen.", Status.PASS);
+			/*
+			 * //Verify 'TAG' category is present
+			 * wdu.waitUntilElementEnabled(PLPCookPage.linkTagCategory, 10);
+			 * gc.scrollToElement(PLPCookPage.linkTagCategory);
+			 * wdu.highlightElement(PLPCookPage.linkTagCategory);
+			 * report.updateTestLog("Cook page", "Category Tag is present in the screen.",
+			 * Status.PASS);
+			 */
 
 		}	catch(Exception e)	{
 			e.printStackTrace();

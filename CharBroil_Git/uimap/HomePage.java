@@ -119,7 +119,7 @@ public class HomePage {
 	//TextBox
 	public static final By txtSearch = By.xpath("(//input[@id='search_desktop'])");
 	public static final By txtSearchResult = By.xpath("//*[@id='algolia-autocomplete-listbox-0']/div/div[1]/div/div/div[1]");
-	public static final By txtFindAPartSearch = By.xpath("//input[@id='partfinder']");	
+	public static final By txtFindAPartSearch = By.xpath("//input[@name='partfinder-request']");	
 	//div[text()='Find A Part']//parent::div/div[2]/input
 	
 	//Buttons
@@ -164,7 +164,7 @@ public class HomePage {
 	public static final By lblPartFinderHeader = By.cssSelector("div.partfinder__header");
 	public static final By linkGuideForPartsName = By.cssSelector("a.guides__link > div.guides__link--title");
 	public static final By linkGuideManualTitle = By.cssSelector("span.guides__manual--title");
-	public static final By txtFindAPart = By.xpath("//input[@id='partfinder']");
+	public static final By txtFindAPart = By.xpath("//input[@name='partfinder-request']");
 	public static final By btnFindAPartSearchSubmit = By.xpath("//div[@class='partfinder__input--submit']/i");
 
 

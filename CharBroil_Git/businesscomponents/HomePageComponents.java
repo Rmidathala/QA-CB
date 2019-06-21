@@ -323,7 +323,7 @@ public class HomePageComponents extends ReusableLibrary {
 			report.updateTestLog("Home Page", "Clicked on find a part button.", Status.PASS);
 
 			// wdu.waitUntilPageReadyStateComplete(10);
-			wdu.waitUntilElementEnabled(HomePage.txtFindAPartSearch, 10);
+			//wdu.waitUntilElementEnabled(HomePage.txtFindAPartSearch, 10);
 			driver.findElement(HomePage.txtFindAPartSearch).clear();
 			driver.findElement(HomePage.txtFindAPartSearch).sendKeys(modelNo);
 			report.updateTestLog("Home Page", "Entered model no for search - " + modelNo, Status.PASS);

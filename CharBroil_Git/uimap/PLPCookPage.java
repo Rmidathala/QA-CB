@@ -11,7 +11,7 @@ public class PLPCookPage {
 	public static final By linkCookFirstRecipe = By.xpath("//div[contains(@class,'ais-infinite-hits--item')]/div/a");
 	public static final By linkRecipeYouMightAlsoLikeTitle = By.cssSelector("div.wprecipe__alsolike--title");
 	public static final By linkRecipeYouMightAlsoLikeTags = By.xpath("//div[@class='wprecipe__alsolike--tags']/a");
-	public static final By linkTagCategory = By.xpath("//div[text()='Tags']");
+	public static final By linkTagCategory = By.xpath("//div[text()='Tag']");
 
 
 	//====================================================//
