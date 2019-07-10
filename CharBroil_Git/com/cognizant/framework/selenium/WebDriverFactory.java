@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -44,6 +45,7 @@ public class WebDriverFactory {
 	 * @return The corresponding {@link WebDriver} object changed by Satyajit on
 	 *         04-04-2017 02:10pm IST
 	 */
+	@SuppressWarnings("deprecation")
 	public static WebDriver getWebDriver(Browser browser) {
 		WebDriver driver = null;
 		properties = Settings.getInstance();
@@ -88,21 +90,15 @@ public class WebDriverFactory {
 			// Takes the system proxy settings automatically
 			System.setProperty("webdriver.gecko.driver", properties.getProperty("GeckoDriverPath"));
 
-			// System.setProperty("webdriver.firefox.logfile","D:\\FirefoxLog.log");
-			// DesiredCapabilities capabilities = new DesiredCapabilities();
-			// DesiredCapabilities capabilities = getProxyCapabilities();
-			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-			capabilities.setCapability("marionette", true);
-			capabilities.setCapability("acceptInsecureCerts", true);
-			capabilities.setCapability("assume_untrusted_cert_issuer", true);
-			capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
-			// capabilities.setCapability("specificationLevel", 1);
-			// capabilities.setCapability("firefox_binary","C:\\Users\\566479\\AppData\\Local\\Nightly\\firefox.exe");
-			// capabilities.setCapability("firefox_binary","C:\\Users\\566479\\AppData\\Local\\Mozilla
-			// Firefox\\firefox.exe");
-			driver = new FirefoxDriver(capabilities);
+			//Set Firefox Headless mode as TRUE
+			FirefoxOptions foptions = new FirefoxOptions();
+			foptions.setHeadless(true);
+			foptions.setCapability("marionette", true);
+			foptions.setCapability("acceptInsecureCerts", true);
+			foptions.setCapability("assume_untrusted_cert_issuer", true);
+			foptions.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+			driver = new FirefoxDriver(foptions);
 
-			// driver = new FirefoxDriver();
 			break;
 
 		case GHOST_DRIVER:
@@ -111,7 +107,7 @@ public class WebDriverFactory {
 			System.setProperty("phantomjs.binary.path",
 			properties.getProperty("PhantomJSPath"));
 			driver = new PhantomJSDriver();
-			break;
+			break; 
 
 			/*System.setProperty("webdriver.chrome.driver", properties.getProperty("ChromeDriverPath"));
 			ChromeOptions options2 = new ChromeOptions();
@@ -283,6 +279,7 @@ public class WebDriverFactory {
 	 *            a list of available devices)
 	 * @return The corresponding {@link ChromeDriver} object
 	 */
+	@SuppressWarnings("deprecation")
 	public static WebDriver getEmulatedWebDriver(String deviceName) {
 		DesiredCapabilities desiredCapabilities = getEmulatedChromeDriverCapabilities(deviceName);
 
@@ -339,6 +336,7 @@ public class WebDriverFactory {
 	 *            The user agent string
 	 * @return The corresponding {@link ChromeDriver} object
 	 */
+	@SuppressWarnings("deprecation")
 	public static WebDriver getEmulatedWebDriver(int deviceWidth, int deviceHeight, float devicePixelRatio,
 			String userAgent) {
 		DesiredCapabilities desiredCapabilities = getEmulatedChromeDriverCapabilities(deviceWidth, deviceHeight,
