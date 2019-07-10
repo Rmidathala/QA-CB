@@ -12,8 +12,8 @@ import org.openqa.selenium.Proxy.ProxyType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -45,7 +45,7 @@ public class WebDriverFactory {
 	 * @return The corresponding {@link WebDriver} object changed by Satyajit on
 	 *         04-04-2017 02:10pm IST
 	 */
-	@SuppressWarnings("deprecation")
+
 	public static WebDriver getWebDriver(Browser browser) {
 		WebDriver driver = null;
 		properties = Settings.getInstance();
@@ -89,15 +89,15 @@ public class WebDriverFactory {
 		case FIREFOX:
 			// Takes the system proxy settings automatically
 			System.setProperty("webdriver.gecko.driver", properties.getProperty("GeckoDriverPath"));
-
+			DesiredCapabilities capabilities_firefox = DesiredCapabilities.firefox();
 			//Set Firefox Headless mode as TRUE
-			FirefoxOptions foptions = new FirefoxOptions();
-			foptions.setHeadless(true);
-			foptions.setCapability("marionette", true);
-			foptions.setCapability("acceptInsecureCerts", true);
-			foptions.setCapability("assume_untrusted_cert_issuer", true);
-			foptions.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
-			driver = new FirefoxDriver(foptions);
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
+			firefoxBinary.addCommandLineOptions("--headless");
+			capabilities_firefox.setCapability("marionette", true);
+			capabilities_firefox.setCapability("acceptInsecureCerts", true);
+			capabilities_firefox.setCapability("assume_untrusted_cert_issuer", true);
+			capabilities_firefox.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+			driver = new FirefoxDriver(capabilities_firefox);
 
 			break;
 
@@ -279,7 +279,7 @@ public class WebDriverFactory {
 	 *            a list of available devices)
 	 * @return The corresponding {@link ChromeDriver} object
 	 */
-	@SuppressWarnings("deprecation")
+	
 	public static WebDriver getEmulatedWebDriver(String deviceName) {
 		DesiredCapabilities desiredCapabilities = getEmulatedChromeDriverCapabilities(deviceName);
 
@@ -336,7 +336,7 @@ public class WebDriverFactory {
 	 *            The user agent string
 	 * @return The corresponding {@link ChromeDriver} object
 	 */
-	@SuppressWarnings("deprecation")
+
 	public static WebDriver getEmulatedWebDriver(int deviceWidth, int deviceHeight, float devicePixelRatio,
 			String userAgent) {
 		DesiredCapabilities desiredCapabilities = getEmulatedChromeDriverCapabilities(deviceWidth, deviceHeight,
