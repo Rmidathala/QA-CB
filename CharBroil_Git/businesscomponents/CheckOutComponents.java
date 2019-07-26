@@ -159,8 +159,8 @@ public class CheckOutComponents extends ReusableLibrary {
 			Thread.sleep(1000);
 			// driver.findElement(CheckOutPage.selectCreditCardType).sendKeys(cardtype);
 
-			gc.selectDropDown(CheckOutPage.selectCreditCardType, cardtype);
-			Thread.sleep(1000);
+			//gc.selectDropDown(CheckOutPage.selectCreditCardType, cardtype);
+			//Thread.sleep(1000);
 			driver.findElement(CheckOutPage.txtVerificationNumber).sendKeys(verificationNumber);
 			Thread.sleep(1000);
 			gc.selectDropDown(CheckOutPage.selectExpirationMonth, expirationMonth);

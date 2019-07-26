@@ -26,11 +26,11 @@ public class CheckOutPage {
 	
 	public static final By lblPaymentInformation = By.xpath("//*[@id='opc-payment']/h2");
 	
-	public static final By txtCreditCardNumber = By.id("cybersourcesop_cc_number");
+	public static final By txtCreditCardNumber = By.xpath("//input[@name='credit-card-number']");
 	public static final By selectCreditCardType = By.id("cybersourcesop_cc_type");
-	public static final By txtVerificationNumber = By.id("cybersourcesop_cc_cid2");
-	public static final By selectExpirationMonth = By.id("cybersourcesop_expiration");
-	public static final By selectExpirationYear = By.id("cybersourcesop_expiration_yr");
+	public static final By txtVerificationNumber = By.xpath("//input[@title='Card Verification Number']");
+	public static final By selectExpirationMonth = By.xpath("//select[@name='payment[cc_exp_month]']");
+	public static final By selectExpirationYear = By.xpath("//select[@name='payment[cc_exp_year]']");
 	
 	public static final By btnContinuePayment = By.xpath("//*[@id='payment-buttons-container']/button");
 	
