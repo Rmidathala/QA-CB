@@ -42,7 +42,7 @@ public class CheckOutPage {
 	public static final By btnContinueCheckout = By.xpath("//button[@title='Continue']");
 	
 	public static final By radioPayPal = By.xpath("//input[@id='p_method_paypal_express']");
-	public static final By radioCreditCard = By.id("p_method_cybersourcesop");	
+	public static final By radioCreditCard = By.xpath("//input[@title='Credit Card']");	
 	
 	
 	
