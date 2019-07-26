@@ -145,7 +145,7 @@ public class CheckOutComponents extends ReusableLibrary {
 		try {
 
 			String cardnumber = dataTable.getData("General_Data", "CreditCardNumber");
-			String cardtype = dataTable.getData("General_Data", "CreditCardType");
+			//String cardtype = dataTable.getData("General_Data", "CreditCardType");
 			String verificationNumber = dataTable.getData("General_Data", "CreditCardVerificationNumber");
 			String expirationMonth = dataTable.getData("General_Data", "CCExpirationMonth");
 			String expirationYear = dataTable.getData("General_Data", "CCExpirationYear");
@@ -360,11 +360,14 @@ public class CheckOutComponents extends ReusableLibrary {
 
 			driver.findElement(CheckOutPage.radioCreditCard).click();
 			driver.findElement(CheckOutPage.btnContinuePayment).click();
+			driver.switchTo().frame(driver.findElement(CheckOutPage.iframeCreditCardInput))	;
 			wdu.waitUntilElementEnabled(CheckOutPage.txtCreditCardNumber, 15);
-			wdu.waitUntilElementEnabled(CheckOutPage.selectCreditCardType, 15);
+			driver.switchTo().defaultContent();
+			//wdu.waitUntilElementEnabled(CheckOutPage.selectCreditCardType, 15);
 			wdu.waitUntilElementEnabled(CheckOutPage.selectExpirationMonth, 15);
 			wdu.waitUntilElementEnabled(CheckOutPage.selectExpirationYear, 15);
-
+			report.updateTestLog("Validate Billing info alignment",
+					"Validation of billing info alignment is Successful", Status.PASS);
 			// gc.validateImage(System.getProperty("user.dir") +
 			// "\\images\\BillingInfoGuest.png", "Billing Info Page", "Billing Info Image
 			// Guest User");
@@ -391,11 +394,14 @@ public class CheckOutComponents extends ReusableLibrary {
 
 			driver.findElement(CheckOutPage.radioCreditCard).click();
 			driver.findElement(CheckOutPage.btnContinuePayment).click();
+			driver.switchTo().frame(driver.findElement(CheckOutPage.iframeCreditCardInput))	;
 			wdu.waitUntilElementEnabled(CheckOutPage.txtCreditCardNumber, 15);
-			wdu.waitUntilElementEnabled(CheckOutPage.selectCreditCardType, 15);
+			driver.switchTo().defaultContent();
+			//wdu.waitUntilElementEnabled(CheckOutPage.selectCreditCardType, 15);
 			wdu.waitUntilElementEnabled(CheckOutPage.selectExpirationMonth, 15);
 			wdu.waitUntilElementEnabled(CheckOutPage.selectExpirationYear, 15);
-
+			report.updateTestLog("Validate Billing info alignment",
+					"Validation of billing info alignment is Successful", Status.PASS);
 			// gc.validateImage(System.getProperty("user.dir") +
 			// "\\images\\BillingInfoRegisteered.png", "Billing Info Page", "Billing Info
 			// Image Registered User");

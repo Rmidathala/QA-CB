@@ -513,12 +513,7 @@ public class MyAccountPageComponent extends ReusableLibrary{
 	
 	public void changePasswordNewUser() 
 	{
-		
 		try {
-			
-			
-			
-
 			String pass = dataTable.getData("General_Data", "Password");
 			String Newpass = dataTable.getData("General_Data", "NewPassword");
 		
@@ -542,7 +537,7 @@ public class MyAccountPageComponent extends ReusableLibrary{
 			driver.findElement(MyAccountPage.lnkLogout).click();
 			
 			Thread.sleep(10000);
-			wdu.waitUntilElementEnabled(HomePage.lnkMyAccount, 40);
+			//wdu.waitUntilElementEnabled(HomePage.lnkMyAccount, 40);
 			
 			driver.findElement(HomePage.lnkMyAccount).click();
 			Thread.sleep(5000);
@@ -552,8 +547,6 @@ public class MyAccountPageComponent extends ReusableLibrary{
 			driver.findElement(MyAccountPage.txtEmailReg).sendKeys(emailacc);
 			Thread.sleep(2000);
 			driver.findElement(MyAccountPage.txtPasswordReg).sendKeys(Newpass);
-			
-			
 			driver.findElement(MyAccountPage.btnLoginRegUser).click();
 			Thread.sleep(5000);
 			wdu.waitUntilElementEnabled(MyAccountPage.lnkAddNewAddress, 50);
@@ -568,15 +561,7 @@ public class MyAccountPageComponent extends ReusableLibrary{
 			{
 				report.updateTestLog("Change Password", "Passowrd Change and login with new password is not successful", Status.FAIL);
 			}
-			
-			
-			
-			
-			
-			
-			
-				
-			
+
 		}
 	
 		catch (Exception e) {
