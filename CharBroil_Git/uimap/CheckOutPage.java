@@ -27,6 +27,7 @@ public class CheckOutPage {
 	public static final By lblPaymentInformation = By.xpath("//*[@id='opc-payment']/h2");
 	
 	public static final By txtCreditCardNumber = By.xpath("//input[@name='credit-card-number']");
+	public static final By iframeCreditCardInput = By.xpath("//iframe[contains(@id,'flex-microform')]");
 	public static final By selectCreditCardType = By.id("cybersourcesop_cc_type");
 	public static final By txtVerificationNumber = By.xpath("//input[@title='Card Verification Number']");
 	public static final By selectExpirationMonth = By.xpath("//select[@name='payment[cc_exp_month]']");

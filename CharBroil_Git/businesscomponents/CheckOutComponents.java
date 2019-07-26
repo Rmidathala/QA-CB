@@ -154,9 +154,11 @@ public class CheckOutComponents extends ReusableLibrary {
 			Thread.sleep(1000);
 			driver.findElement(CheckOutPage.btnContinuePayment).click();
 			wdu.waitUntilPageReadyStateComplete(20);
+			driver.switchTo().frame(driver.findElement(CheckOutPage.iframeCreditCardInput))	;
 			wdu.waitUntilElementLocated(CheckOutPage.txtCreditCardNumber, 15);
 			driver.findElement(CheckOutPage.txtCreditCardNumber).sendKeys(cardnumber);
 			Thread.sleep(1000);
+			driver.switchTo().defaultContent();
 			// driver.findElement(CheckOutPage.selectCreditCardType).sendKeys(cardtype);
 
 			//gc.selectDropDown(CheckOutPage.selectCreditCardType, cardtype);
