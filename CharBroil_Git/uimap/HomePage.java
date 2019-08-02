@@ -90,13 +90,13 @@ public class HomePage {
 	public static final By linkFormsInformationTitle = By.cssSelector("div.form-information-block > h2");
 	public static final By linkSupportCenters = By.linkText("Support Centers");
 	public static final By linkReplacementParts = By.linkText("Replacement Parts");
-	public static final By linkAboutUs = By.linkText("About Us");
+	public static final By linkAboutUs = By.xpath("//a[text()='About Us']");
 	public static final By linkAboutUsContentFirst = By.cssSelector("h2");
 	public static final By linkCareers = By.linkText("Careers");
 	public static final By linkCbGear = By.linkText("Char-Broil� Gear");
-	public static final By linkSaberGrills = By.xpath("//*[@id='footer-company']/div/ul/li[3]/a");
-	public static final By linkDancookGrills = By.xpath("//*[@id='footer-company']/div/ul/li[4]/a");
-	public static final By linkOklahomaJoeSmokers = By.xpath("//section[@id='footer-company']/div/ul/li[5]/a");
+	public static final By linkSaberGrills = By.xpath("//a[contains(text(),'Saber') or contains(text(),'SABER')]");
+	public static final By linkDancookGrills = By.xpath("//a[contains(text(),'Dancook')]");
+	public static final By linkOklahomaJoeSmokers = By.xpath("//a[contains(@href,'http://www.oklahomajoes')]");
 	public static final By linkIdeaSubmission = By.xpath("//section[@id='footer-company']/div/ul/li[6]/a");
 	public static final By linkPrivacyPolicy = By.linkText("Privacy Policy");
 	public static final By linkTermsOfUse = By.xpath("(//a[contains(text(),'Terms of Use')])[2]");
