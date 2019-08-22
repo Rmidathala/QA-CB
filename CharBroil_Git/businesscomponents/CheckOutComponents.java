@@ -583,7 +583,7 @@ public class CheckOutComponents extends ReusableLibrary {
 			wdu.waitUntilPageReadyStateComplete(15);
 			gc.scrollToElement(MyAccountPage.lnkAddNewAddress);
 			// wdu.waitUntilElementEnabled(MyAccountPage.lnkAddNewAddress, 50);
-
+			if(wdu.objectExists(ShoppingCartPage.cartCount)) {
 			gc.scrollToElement(ShoppingCartPage.iconShoppingCart);
 			wdu.waitUntilElementEnabled(ShoppingCartPage.iconShoppingCart, 30);
 			gc.scrollToElement(ShoppingCartPage.iconShoppingCart);
@@ -622,7 +622,9 @@ public class CheckOutComponents extends ReusableLibrary {
 				}
 
 			}
-
+			}else {
+				report.updateTestLog("Clear ShoppingCart", "Shopping Cart is Empty", Status.PASS);
+			}
 			Thread.sleep(1000);
 
 			driver.findElement(MyAccountPage.lnkLogout).click();
