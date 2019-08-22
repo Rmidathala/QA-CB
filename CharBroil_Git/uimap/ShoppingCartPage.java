@@ -34,7 +34,7 @@ public class ShoppingCartPage {
 	public static final By iconShoppingCart = By.xpath("//a[contains(@href,'cart')]");
 	
 	
-	
+	public static final By cartCount = By.xpath("//span[@class='header__cart-count']");
 	public static final By lblCheckout = By.xpath("//h1[contains(text(),'Checkout')]");
 
 }

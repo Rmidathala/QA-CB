@@ -663,7 +663,9 @@ public class CheckOutComponents extends ReusableLibrary {
 	public void clearCart() {
 
 		try {
-
+			if(wdu.objectExists(ShoppingCartPage.cartCount)) {
+				
+			
 			wdu.waitUntilElementEnabled(ShoppingCartPage.iconShoppingCart, 30);
 
 			driver.findElement(ShoppingCartPage.iconShoppingCart).click();
@@ -701,6 +703,10 @@ public class CheckOutComponents extends ReusableLibrary {
 
 			}
 
+		}
+			else {
+				report.updateTestLog("Clear ShoppingCart", "Shopping Cart is Empty", Status.PASS);
+			}
 		}
 
 		catch (Exception e) {

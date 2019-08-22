@@ -16,7 +16,7 @@ public class ProductDetailsPage {
 
 	public static final By lblModelNumber = By.xpath("//h5[@class='Product-summary__model']");
 	public static final By selectQuantity = By.xpath("//select[@id='qty']");
-	public static final By lblProductDescription = By.xpath("//div[@class='Product-summary__description']");
+	public static final By lblProductDescription = By.xpath("//div[@class='Product-summary__description']/p");
 	public static final By lblProductName = By.xpath("//h1[@class='Product-summary__name']");
 	
 	public static final By lblProductNameOfPriceSpider = By.xpath("//div[@class='ps-product-details-title']");
