@@ -615,7 +615,7 @@ public class CheckOutComponents extends ReusableLibrary {
 				}
 
 				wdu.waitUntilPageReadyStateComplete(20);
-				if (wdu.objectExists(ShoppingCartPage.lblEmptyShoppingCart)) {
+				if (wdu.objectExists(ShoppingCartPage.shopicon)) {
 					report.updateTestLog("Clear ShoppingCart", "Shopping Cart is Empty", Status.PASS);
 				} else {
 					report.updateTestLog("Clear ShoppingCart", "Shopping Cart is still not empty", Status.FAIL);
@@ -697,7 +697,7 @@ public class CheckOutComponents extends ReusableLibrary {
 				}
 
 				wdu.waitUntilPageReadyStateComplete(20);
-				if (wdu.objectExists(ShoppingCartPage.lblEmptyShoppingCart)) {
+				if (wdu.objectExists(ShoppingCartPage.shopicon)) {
 					report.updateTestLog("Clear ShoppingCart", "Shopping Cart is Empty", Status.PASS);
 				} else {
 					report.updateTestLog("Clear ShoppingCart", "Shopping Cart is still not empty", Status.FAIL);
