@@ -12,6 +12,7 @@ import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.Browser;
 import com.cognizant.framework.selenium.WebDriverUtil;
 
+import componentgroups.CommonFunctions;
 import supportlibraries.*;
 import uimap.HomePage;
 import uimap.MyAccountPage;
@@ -28,6 +29,7 @@ public class HomePageComponents extends ReusableLibrary {
 
 	WebDriverUtil wdu = new WebDriverUtil(driver);
 	GeneralComponents gc = new GeneralComponents(scriptHelper);
+	CommonFunctions commonFunctions = new CommonFunctions(scriptHelper);
 
 	public HomePageComponents(ScriptHelper scriptHelper) {
 		super(scriptHelper);
@@ -326,8 +328,10 @@ public class HomePageComponents extends ReusableLibrary {
 			//wdu.waitUntilElementEnabled(HomePage.txtFindAPartSearch, 10);
 			driver.findElement(HomePage.txtFindAPartSearch).clear();
 			driver.findElement(HomePage.txtFindAPartSearch).sendKeys(modelNo);
+			
 			report.updateTestLog("Home Page", "Entered model no for search - " + modelNo, Status.PASS);
-			driver.findElement(HomePage.btnFindAPartSearch).click();
+			//driver.findElement(HomePage.btnFindAPartSearch).click();
+			commonFunctions.hitEnterKey(driver.findElement(HomePage.txtFindAPartSearch), "Find a Part text Box");
 			report.updateTestLog("Home Page", "Clicked on find a part button.", Status.PASS);
 
 		} catch (Exception e) {
