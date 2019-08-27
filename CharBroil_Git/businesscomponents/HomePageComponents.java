@@ -258,7 +258,7 @@ public class HomePageComponents extends ReusableLibrary {
 			} else {
 				driver.findElement(HomePage.txtSearchItemHomePage).sendKeys(Keys.ENTER);
 			}
-			//Thread.sleep(8000);
+			Thread.sleep(8000);
 			wdu.waitUntilElementVisible(ProductListingPage.lblSortByPLP, 30);
 
 			if (driver.findElement(ProductListingPage.lblSortByPLP).isDisplayed()) {
