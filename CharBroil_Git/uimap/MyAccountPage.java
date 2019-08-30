@@ -61,16 +61,13 @@ public class MyAccountPage {
 	public static final By lblNewsletterSubscription = By.xpath("//h2[contains(text(),'Newsletter Subscription')]");
 	public static final By txtEmailAcc = By.xpath("//input[@id='email']");
 	//public static final By lnkLogout = By.xpath("//div[@class='top-links hidden-md-down']/div/div[5]/a");
-	public static final By lnkLogout = By.xpath("(//a[text()='Logout'])[1]");
+	public static final By lnkLogout = By.xpath("//div[@id='header-wrapper']/div/div/div[4]/a");
 	
 	public static final By lblBlankFirstNameError = By.xpath("//li[@class='error-msg']//li[1]/span");
 	public static final By lblBlankLastNameError = By.xpath("//li[@class='error-msg']//li[3]/span");
 	public static final By lblBlankEmailNameError = By.xpath("//li[@class='error-msg']//li[5]/span");
 	public static final By checkboxNewsLetter = By.xpath("//input[@title='Sign Up for Newsletter']");
 	public static final By lblNewsletter = By.xpath("(//*[@class='my-account__box__content'])[2]/p");
-	
-	
-	
 	
 	public static final By editThirdAddress = By.xpath("//div[@class='my-account__section my-account__section--address-book']/div[1]/div[3]//a[contains(text(),'Edit')]");
 	

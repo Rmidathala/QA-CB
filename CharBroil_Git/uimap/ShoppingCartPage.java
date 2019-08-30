@@ -13,7 +13,7 @@ public class ShoppingCartPage {
 	
 	public static final By lnkDeleteProduct = By.xpath("//form[@id='update-cart']/div[2]/div[6]/a/i");
 	public static final By lblEmptyShoppingCart = By.xpath("//h1[@class='pod-carousel__title']"); //YOUR SHOPPING CART IS EMPTY...
-	public static final By shopicon = By.xpath("//header[@class='lander-hero__header']");
+	public static final By shopicon = By.xpath("//header[@class='lander-hero__header']/img");
 	public static final By selectCountry = By.xpath("//select[@id='country']");
 	public static final By selectState = By.xpath("//select[@id='region_id']");                                                //---- 55
 	public static final By selectPostalCode = By.xpath("//input[@id='postcode']");													//31902

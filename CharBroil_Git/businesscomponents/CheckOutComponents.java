@@ -3,6 +3,7 @@ package businesscomponents;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import com.cognizant.framework.Status;
 import com.cognizant.framework.selenium.WebDriverUtil;
@@ -616,7 +617,7 @@ public class CheckOutComponents extends ReusableLibrary {
 						 */
 				}
 
-				wdu.waitUntilPageReadyStateComplete(20);
+				//wdu.waitUntilPageReadyStateComplete(20);
 				if (wdu.objectExists(ShoppingCartPage.shopicon)) {
 					report.updateTestLog("Clear ShoppingCart", "Shopping Cart is Empty", Status.PASS);
 				} else {
@@ -629,7 +630,9 @@ public class CheckOutComponents extends ReusableLibrary {
 			}
 			Thread.sleep(1000);
 
-			driver.findElement(MyAccountPage.lnkLogout).click();
+			WebElement element =driver.findElement(MyAccountPage.lnkLogout);
+			JavascriptExecutor executor = (JavascriptExecutor)driver.getWebDriver();
+			executor.executeScript("arguments[0].click();", element);
 
 			wdu.waitUntilPageReadyStateComplete(15);
 
