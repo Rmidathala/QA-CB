@@ -40,7 +40,7 @@ public class GeneralComponents extends ReusableLibrary {
 
 			driver.get(properties.getProperty("ApplicationUrl"));
 			driver.manage().window().maximize();		
-			driver.manage().deleteAllCookies();
+			//driver.manage().deleteAllCookies();
 			wdu.waitUntilPageReadyStateComplete(120);		
 			System.out.println("Test Script Execution Started.........");
 		}	catch (Exception e) {

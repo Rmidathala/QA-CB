@@ -23,11 +23,11 @@ public class ProductDetailsPage {
 	
 	//public static final By btnWhereToBuy = By.xpath("//span[@class='ps-button-label']"); 
 	
-	public static final By subMenuSpecification = By.xpath("//div[@id='product-drawers']/div[1]");
-	public static final By subMenuRatingReviews = By.xpath("//div[@id='product-drawers']/div[2]");
-	public static final By subMenuQuestionAnswers = By.xpath("//div[@id='product-drawers']/div[3]");
+	public static final By subMenuSpecification = By.xpath("//div[@id='specifications']");
+	public static final By subMenuRatingReviews = By.xpath("//div[@id='ratings']");
+	public static final By subMenuQuestionAnswers = By.xpath("//div[@id='questions']");
 	public static final By subMenuPartofGrills = By.xpath("//div[@id='product-drawers']/div[4]");
-	public static final By subMenuGuideManuals = By.xpath("//div[@id='product-drawers']/div[5]");
+	public static final By subMenuGuideManuals = By.xpath("//div[@id='guides']");
 	
 	
 	
