@@ -1,8 +1,5 @@
 package supportlibraries;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -893,7 +890,9 @@ public class DriverScript {
 			} catch (FrameworkException fx) {
 				exceptionHandler(fx, fx.getErrorName());
 			} catch (InvocationTargetException ix) {
+				System.out.println(ix.getMessage());
 				exceptionHandler((Exception) ix.getCause(), "Error");
+				
 			} catch (Exception ex) {
 				exceptionHandler(ex, "Error");
 			}
