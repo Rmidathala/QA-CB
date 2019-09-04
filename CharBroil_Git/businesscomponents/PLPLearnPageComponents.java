@@ -21,7 +21,6 @@ public class PLPLearnPageComponents extends ReusableLibrary {
 		super(scriptHelper);
 		// TODO Auto-generated constructor stub
 	}
-
 	/*
 	 * Method for validating Learn sub category landing page header 
 	 */

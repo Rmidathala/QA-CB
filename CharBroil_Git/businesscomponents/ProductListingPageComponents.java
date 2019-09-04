@@ -24,6 +24,7 @@ public class ProductListingPageComponents extends ReusableLibrary {
 		super(scriptHelper);
 		// TODO Auto-generated constructor stub
 	}
+	
 
 	/************************************************************************************************************************
 	 * Function Name: selectRandomSimpleProductFromPLP_OLD Objective: To select

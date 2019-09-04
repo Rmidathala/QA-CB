@@ -27,6 +27,7 @@ public class CheckOutComponents extends ReusableLibrary {
 		// TODO Auto-generated constructor stub
 	}
 
+	
 	/*************************************
 	 * Adding Billing and Shippng Address
 	 *********************************************************/

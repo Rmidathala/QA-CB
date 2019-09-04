@@ -21,7 +21,6 @@ public class MyAccountPageComponent extends ReusableLibrary{
 	}
 
 	
-	
 /************************************* Creating new Account *********************************************************/
 	
 	public void createAccountNewUser() 

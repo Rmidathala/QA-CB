@@ -59,7 +59,7 @@ public class HomePageComponents extends ReusableLibrary {
 	 */
 	public void validateTelephone() {
 		try {
-			wdu.waitUntilElementEnabled(HomePage.linkTelephone, 10);
+			wdu.waitUntilElementEnabled(HomePage.linkTelephone, 15);
 			if (driver.findElement(HomePage.linkTelephone).isDisplayed())
 				report.updateTestLog("Home Page", "Telephone link is present.", Status.PASS);
 			else

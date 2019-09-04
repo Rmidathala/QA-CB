@@ -16,7 +16,6 @@ public class SupportPageComponents extends ReusableLibrary {
 	public SupportPageComponents(ScriptHelper scriptHelper)	{
 		super(scriptHelper);
 	}
-
 	/*
 	 * Method to validate Register your product in Support link
 	 */

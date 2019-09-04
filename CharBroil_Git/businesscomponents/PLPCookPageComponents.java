@@ -47,7 +47,6 @@ public class PLPCookPageComponents extends ReusableLibrary {
 			report.updateTestLog("Exception in validateCookSubMenuPageHeader", "Exception is " + e, Status.FAIL);
 		}
 	}
-
 	/*
 	 * Method for validating filter name in Cook PLP pages 
 	 */

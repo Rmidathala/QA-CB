@@ -23,7 +23,6 @@ public class PLPShopPageComponents extends ReusableLibrary {
 	public PLPShopPageComponents(ScriptHelper scriptHelper) {
 		super(scriptHelper);
 	}
-
 	/*
 	 * Method for validating sub category landing page header 
 	 */

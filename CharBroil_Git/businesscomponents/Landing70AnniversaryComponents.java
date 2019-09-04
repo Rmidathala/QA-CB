@@ -18,6 +18,7 @@ public class Landing70AnniversaryComponents extends ReusableLibrary {
 	public Landing70AnniversaryComponents(ScriptHelper scriptHelper) {
 		super(scriptHelper);		
 	}
+	
 
 	public void validateAnniversary()	{
 		try	{

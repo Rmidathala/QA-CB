@@ -12,16 +12,10 @@ public class ModularOutdoorKitchenComponent extends ReusableLibrary {
 
 	WebDriverUtil obj=new WebDriverUtil(driver);
 
-
-
 	public ModularOutdoorKitchenComponent(ScriptHelper scriptHelper) {
 		super(scriptHelper);
 		// TODO Auto-generated constructor stub
 	}
-
-
-
-
 
 	/******************************************** Validate panel expand Functionality and content Validation *****************************************************************/	
 	public void validatePanelExpand(){

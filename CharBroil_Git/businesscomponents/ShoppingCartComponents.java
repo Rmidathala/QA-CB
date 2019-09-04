@@ -22,7 +22,6 @@ public class ShoppingCartComponents extends ReusableLibrary {
 		super(scriptHelper);
 		// TODO Auto-generated constructor stub
 	}
-
 	/*********************************************************
 	 * Click Shopping Cart Icon
 	 ***************************************************************************************/

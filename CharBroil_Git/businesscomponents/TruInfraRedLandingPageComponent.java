@@ -12,7 +12,6 @@ public class TruInfraRedLandingPageComponent extends ReusableLibrary {
 		super(scriptHelper);
 		// TODO Auto-generated constructor stub
 	}
-
 	public void verifyTrueInfraredHeading(){
 		try
 		{

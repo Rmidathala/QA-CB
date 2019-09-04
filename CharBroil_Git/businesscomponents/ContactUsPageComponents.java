@@ -25,6 +25,7 @@ public class ContactUsPageComponents extends ReusableLibrary {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
 	public void invokeNonUSApplication() {
 		try	{
 			String applicationURL = dataTable.getData("General_Data", "ApplicationURL");
