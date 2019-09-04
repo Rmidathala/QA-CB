@@ -148,8 +148,12 @@ public class DriverScript {
 
 	/**
 	 * Function to execute the given test case
+	 * @throws InstantiationException 
+	 * @throws ClassNotFoundException 
+	 * @throws InvocationTargetException 
+	 * @throws IllegalAccessException 
 	 */
-	public void driveTestExecution() {
+	public void driveTestExecution() throws IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException {
 		startUp();
 		initializeTestIterations();
 		initializeWebDriver();
@@ -160,7 +164,7 @@ public class DriverScript {
 		wrapUp();
 	}
 
-	private void executeCraftOrCraftLite() {
+	private void executeCraftOrCraftLite() throws IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException {
 		if (properties.getProperty("Approach")
 				.equalsIgnoreCase("KeywordDriven")) {
 			initializeTestScript();
@@ -879,21 +883,21 @@ public class DriverScript {
 		}
 	}
 
-	private void executeCRAFTTestIterations() {
+	private void executeCRAFTTestIterations() throws IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException {
 		while (currentIteration <= testParameters.getEndIteration()) {
 			report.addTestLogSection("Iteration: "
 					+ Integer.toString(currentIteration));
 
 			// Evaluate each test iteration for any errors
-			try {
+			//try {
 				executeTestcase(businessFlowData);
-			} catch (FrameworkException fx) {
-				exceptionHandler(fx, fx.getErrorName());
-			} catch (InvocationTargetException ix) {
-				exceptionHandler((Exception) ix.getCause(), "Error");
-			} catch (Exception ex) {
-				exceptionHandler(ex, "Error");
-			}
+			//} catch (FrameworkException fx) {
+				//exceptionHandler(fx, fx.getErrorName());
+			//} catch (InvocationTargetException ix) {
+				//exceptionHandler((Exception) ix.getCause(), "Error");
+			//} catch (Exception ex) {
+				//exceptionHandler(ex, "Error");
+			//}
 
 			currentIteration++;
 		}
