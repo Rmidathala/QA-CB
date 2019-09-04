@@ -1,5 +1,8 @@
 package supportlibraries;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -148,12 +151,8 @@ public class DriverScript {
 
 	/**
 	 * Function to execute the given test case
-	 * @throws InstantiationException 
-	 * @throws ClassNotFoundException 
-	 * @throws InvocationTargetException 
-	 * @throws IllegalAccessException 
 	 */
-	public void driveTestExecution() throws IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException {
+	public void driveTestExecution() {
 		startUp();
 		initializeTestIterations();
 		initializeWebDriver();
@@ -164,7 +163,7 @@ public class DriverScript {
 		wrapUp();
 	}
 
-	private void executeCraftOrCraftLite() throws IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException {
+	private void executeCraftOrCraftLite() {
 		if (properties.getProperty("Approach")
 				.equalsIgnoreCase("KeywordDriven")) {
 			initializeTestScript();
@@ -883,21 +882,21 @@ public class DriverScript {
 		}
 	}
 
-	private void executeCRAFTTestIterations() throws IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException {
+	private void executeCRAFTTestIterations() {
 		while (currentIteration <= testParameters.getEndIteration()) {
 			report.addTestLogSection("Iteration: "
 					+ Integer.toString(currentIteration));
 
 			// Evaluate each test iteration for any errors
-			//try {
+			try {
 				executeTestcase(businessFlowData);
-			//} catch (FrameworkException fx) {
-				//exceptionHandler(fx, fx.getErrorName());
-			//} catch (InvocationTargetException ix) {
-				//exceptionHandler((Exception) ix.getCause(), "Error");
-			//} catch (Exception ex) {
-				//exceptionHandler(ex, "Error");
-			//}
+			} catch (FrameworkException fx) {
+				exceptionHandler(fx, fx.getErrorName());
+			} catch (InvocationTargetException ix) {
+				exceptionHandler((Exception) ix.getCause(), "Error");
+			} catch (Exception ex) {
+				exceptionHandler(ex, "Error");
+			}
 
 			currentIteration++;
 		}
