@@ -890,7 +890,7 @@ public class DriverScript {
 			} catch (FrameworkException fx) {
 				exceptionHandler(fx, fx.getErrorName());
 			} catch (InvocationTargetException ix) {
-				System.out.println(ix.getMessage());
+				System.out.println(ix.toString());
 				exceptionHandler((Exception) ix.getCause(), "Error");
 				
 			} catch (Exception ex) {
